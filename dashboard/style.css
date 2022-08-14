@@ -58,26 +58,33 @@ body{
 }
 .search-area{
 	background-color:#889FA5;
-	width:250px;
-	height:40px;
+	width:230px;
+	height:30px;
 	border-radius:20px;
 	text-align:center;
 	color:white;
-	
+	display:flex;
+	align-items:center;
+	padding:5px;
 
 }
 .search-field{
+	flex:1;
+	position:inherit;
 	float:right;
-	height:40px;
-	width:200px;
+	height:30px;
+	width:170px;
 	border-radius:20px;
 	border:hidden;
+	outline:none;
 	top:50%;
 	background-color:#889FA5;
 	color:white;
+	padding:10px;
+	
 }
 .search-field i{
-	position:sticky;
+	
 	top:50%;
 	left:10%;
 }
@@ -143,6 +150,7 @@ body{
 	border-radius:50px;
 	text-align:center;
 	float:center;
+	
 	
 }
 .dark-mode-container{
