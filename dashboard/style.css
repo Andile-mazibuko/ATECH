@@ -226,14 +226,13 @@
 	display:flex;
 	justify-content:center;
 	flex-wrap: wrap; 
-	height:87.8%;
-	width:83.8%;
+	height:90%;
+	width:85%;
 	right:0;
 	bottom:0;
 	color:white;
 	overflow:hidden;
 	overflow-y:scroll;
-	padding:10px;
 	background-color:#B1BDC5;
 	transtion:1s;
 	
@@ -323,6 +322,6 @@
 	background-color:grey;
 }
 .close-productArea{
-	width:88.8%;
+	width:90%;
 	transition:1s;
 }
