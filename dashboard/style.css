@@ -8,11 +8,11 @@ body{
 	background-color:#43655A;
 	top:0;
 	right:0;
-	transition:2s;
+	transition:1s;
 }
 .close-navbar{
 	width:90%;
-	transition:2s;
+	transition:1s;
 	
 }
 .logo-container{
@@ -141,6 +141,7 @@ body{
 	height:10%;
 	background-color:#37AAAC;
 	color:white;
+	align-items:center;
 	
 }
 .side-bar-content{
@@ -149,9 +150,6 @@ body{
 	width:100%;
 	border-radius:50px;
 	text-align:center;
-	float:center;
-	
-	
 }
 .dark-mode-container{
 	bottom:10%;
@@ -193,30 +191,102 @@ body{
 	transition:1s;
 }
 
-.side-bar-content ul li{
-	position: relative;
-	display:flex;
-	padding:9px;
-	font-size:20px;
-	color:white;
-	left:2;
-}
-
-.side-bar-content ul li a{
-	text-decoration:none;
-	background-color:#101827;
-	color:white;
+.side-bar-content div{
 	width:100%;
-	line-height: 24px;
+	height:50px;
+	background-color:grey;
+	opacity:0.5;
+	align-items:center;
+	display:flex;
+	
 }
-.side-bar-content ul li div:hover{
-	background-color:#101827;
-	font-size:25px;
+
+.side-bar-content a{
+	text-decoration:none;
+	color:white;
+	transition:1s;
 }
-.side-bar-content ul{
-	float:left;
+.side-bar-content a div:hover{
+	text-decoration:none;
+	background-color:#B1BDC5;
+	
+}
+
+.side-bar-content a :hover{
+	opacity:1;
+	float:right;
+	font-size:20px;
+	transition:1s;
+	
+}
+.side-bar-content i{
+	padding:10px;
+
+}
+.products-area{
+	position:fixed;
+	height:87.8%;
+	width:83.8%;
+	right:0;
+	bottom:0;
+	color:white;
+	overflow:hidden;
+	overflow-y:scroll;
+	padding:10px;
+	background-color:#B1BDC5;
+	
+	
+}
+
+.products-area .product{
+	position:relative;
+	width:300px;
+	padding:10px;
+	height:300px;
+	margin:20px;
+	border-radius:20px;
+	background-color:white;
+	padding-left :10px;
+	text-align:center;
+	
+}
+.products-area .product h3{
+	color:#43655A;
+}
+
+.item-img-container{
+	width:100px;
+	position:inherit;
+	height:100px;
+	background-color:wheat;
+	border-radius:50%;
+	left:100px;
+	top:30px;
+	box-shadow:20px black;
+}
+
+
+
+
+.products-area .product p{
+	color:#43655A;
+	text-size:90px;
+	position:relative;
+}
+
+
+
+.add-item{
+	background-color:#37AAAC;
+	height:30px;
+	border:none;
+	border-radius:15px;
 	cursor:pointer;
-	list-style-type: none;
+}
+.add-item:hover{
+	border:2px solid;
+	border-color:teal;
+	transition:.2s;
 }
 
 
@@ -226,17 +296,23 @@ body{
 
 
 
+
+}
 .dark-mode{
 	
 	background-color:rgba(21, 30, 47,1);
-	transition: 2s;
+	transition: 1s;
 }
 
 .dark-mode-sidebar{
 	background-color:#101827;
-	transition: 2s;
+	transition: 1s;
 	color:white;
 }
 .dark-navbar{
 	background-color:#101827;
+}
+
+.product-dark{
+	background-color:grey;
 }
