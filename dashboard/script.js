@@ -3,7 +3,7 @@
 	{
 		let sidebar = document.getElementById("side-bar");
 		let  arrbtn = document.getElementById("arrow-btn");
-		let navbar = document.getElementById("nav-bar"); 
+		let navbar = document.getElementById("nav-bar"); 		
 		let productArea = document.getElementById("product-area");
 		navbar.classList.toggle("close-navbar");
 		sidebar.classList.toggle("close-side-bar");

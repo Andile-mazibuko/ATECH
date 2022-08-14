@@ -212,9 +212,8 @@
 
 .side-bar-content a :hover{
 	opacity:1;
-	float:right;
-	font-size:20px;
-	transition:1s;
+	padding-left:10px;
+	transition:.5s;
 	
 }
 .side-bar-content i{
@@ -270,13 +269,6 @@
 }
 
 
-.products-area .product p{
-	color:#43655A;
-	text-size:90px;
-	position:relative;
-}
-
-
 
 .add-item{
 	background-color:#37AAAC;
@@ -297,8 +289,6 @@
 
 
 
-
-
 }
 .dark-mode{
 	
@@ -312,11 +302,11 @@
 	color:white;
 }
 .dark-navbar{
-	background-color:#101827;
+	background-color:#383F50;
 }
 
 .product-dark{
-	background-color:rgba(21, 30, 47,1);
+	background-color:#182337;
 }
 .dark-product{
 	background-color:grey;
