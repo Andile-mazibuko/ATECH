@@ -1,6 +1,4 @@
-body{
-	background-color:#B1BDC5;
-}
+
 .navigation-bar{
 	position:fixed;
 	height:10%;
@@ -225,6 +223,9 @@ body{
 }
 .products-area{
 	position:fixed;
+	display:flex;
+	justify-content:center;
+	flex-wrap: wrap; 
 	height:87.8%;
 	width:83.8%;
 	right:0;
@@ -234,7 +235,7 @@ body{
 	overflow-y:scroll;
 	padding:10px;
 	background-color:#B1BDC5;
-	
+	transtion:1s;
 	
 }
 
@@ -248,7 +249,7 @@ body{
 	background-color:white;
 	padding-left :10px;
 	text-align:center;
-	
+	transtion:1s;
 }
 .products-area .product h3{
 	color:#43655A;
@@ -265,7 +266,9 @@ body{
 	box-shadow:20px black;
 }
 
-
+.products-area a{
+	text-decoration:none;
+}
 
 
 .products-area .product p{
@@ -314,5 +317,12 @@ body{
 }
 
 .product-dark{
+	background-color:rgba(21, 30, 47,1);
+}
+.dark-product{
 	background-color:grey;
+}
+.close-productArea{
+	width:88.8%;
+	transition:1s;
 }
