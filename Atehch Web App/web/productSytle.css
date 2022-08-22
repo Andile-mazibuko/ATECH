@@ -1,0 +1,193 @@
+
+.navigation-bar{
+	position:fixed;
+	height:10%;
+	width:100%;
+	background-color:#43655A;
+	top:0;
+	right:0;
+	transition:1s;
+}
+
+.navigation-bar a:visited{
+	color:white;
+}
+.navigation-bar a{
+	text-decoration:none;
+	text-color:white;
+}
+.logo-container{
+	position:sticky;
+	height:90%;
+	width:90px;
+	float:left;
+	border:2px solid;
+	border-radius:12px;
+	left:10px;
+}
+.logo-container img{
+	
+	height:100%;
+	width:100%;
+	border-radius:12px;
+}
+
+.navigation-bar li{
+	display:inline;
+	float:left;
+	padding:15px;
+	color: #DADDE2;
+	
+}
+.navigation-list{
+	float:right;
+}
+.navigation-bar li a{
+	text-decoration:none;
+	color: #DADDE2;
+	
+}
+.search-area{
+	background-color:#889FA5;
+	width:230px;
+	height:30px;
+	border-radius:20px;
+	text-align:center;
+	color:white;
+	display:flex;
+	align-items:center;
+	padding:5px;
+
+}
+.search-field{
+	flex:1;
+	position:inherit;
+	float:right;
+	height:30px;
+	width:170px;
+	border-radius:20px;
+	border:hidden;
+	outline:none;
+	top:50%;
+	background-color:#889FA5;
+	color:white;
+	padding:10px;
+	
+}
+.search-field i{
+	
+	top:50%;
+	left:10%;
+}
+
+
+
+.products-area{
+	position:fixed; 
+	height:90%;
+	width:100%;
+	right:0;
+	bottom:0;
+	color:white;
+	overflow:hidden;
+	overflow-y:scroll;
+	background-color:#B1BDC5;
+	transition:1s;
+	
+}
+
+
+
+
+
+.fa fa-shopping-basket span {
+	
+	
+}
+.products-area a{
+	text-decoration:none;
+}
+
+
+.dark-mode{
+	
+	background-color:rgba(21, 30, 47,1);
+	transition: 1s;
+}
+
+.dark-navbar{
+	background-color:#383F50;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.product-image-container{
+	position:absolute;
+	width:30%;
+	height:70%;
+	background-color:wheat;
+	left:1%;
+	top:2%;
+}
+
+.product-image-container img{
+	width:100%;
+	height:100%;
+}
+
+
+.product-specifications{
+	position:absolute;
+	width:67%;
+	height:70%;
+	left:33%;
+	top:1%;
+	border:2px solid;
+}
+
+.product-specifications h3{
+	text-align:center;
+	font-size:30px;
+	
+}
+.product-specifications p{
+	font-size:20px;
+	left:10%;
+}
+.add-to-wishlist{
+	background-color:wheat;
+	border:none;
+	width:50px;
+	height:45px;
+	border-radius:10px;
+	bottom:10%;
+	left:8%;
+	position:absolute;
+	cursor:pointer;
+}
+.red-heart{
+	color:red;
+}
+.add-item{
+	background-color:wheat;
+	height:40px;
+	width:170px;
+	border:none;
+	bottom:11%;
+	left:15%;
+	position:absolute;
+	border-radius:10px;
+	cursor:pointer;
+}
