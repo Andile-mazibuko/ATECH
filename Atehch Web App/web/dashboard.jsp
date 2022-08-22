@@ -87,7 +87,7 @@
                             Add To Cart 
                             <i class="fa fa-shopping-basket" aria-hidden="true"></i>
 			</button>
-			<br><a href="product.html">veiw details</a>
+			<br><a href="product.jsp">veiw details</a>
                 </div>
             <%}%>
 	</div>
