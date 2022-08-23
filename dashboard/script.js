@@ -34,3 +34,8 @@
 		let span = document.getElementById("items").innerHTML = ""+number;
 		return number;
 	}
+	function showLogInForm(){
+		let login = document.getElementById("login");
+		
+		login.classList.toggle("login-visible");
+	}

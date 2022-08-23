@@ -2,16 +2,11 @@
 .navigation-bar{
 	position:fixed;
 	height:10%;
-	width:85%;
+	width:100%;
 	background-color:#43655A;
 	top:0;
 	right:0;
 	transition:1s;
-}
-.close-navbar{
-	width:90%;
-	transition:1s;
-	
 }
 .navigation-bar a:visited{
 	color:white;
@@ -34,17 +29,6 @@
 	height:100%;
 	width:100%;
 	border-radius:12px;
-}
-.side-bar{
-	background-color:#889FA5;
-	position:fixed;
-	left:0;
-	height:100%;
-	width:15%;
-	bottom:0;
-	transition:width 1s;
-	
-	
 }
 .navigation-bar li{
 	display:inline;
@@ -225,7 +209,7 @@
 	justify-content:center;
 	flex-wrap: wrap; 
 	height:90%;
-	width:85%;
+	width:100%;
 	right:0;
 	bottom:0;
 	color:white;
@@ -281,43 +265,6 @@
 	text-decoration:none;
 }
 
-
-
-.add-item{
-	background-color:#37AAAC;
-	height:30px;
-	border:none;
-	border-radius:15px;
-	cursor:pointer;
-}
-.add-item:hover{
-	border:2px solid;
-	border-color:teal;
-	transition:.2s;
-}
-
-
-
-
-
-
-
-}
-.dark-mode{
-	
-	background-color:rgba(21, 30, 47,1);
-	transition: 1s;
-}
-
-.dark-mode-sidebar{
-	background-color:#101827;
-	transition: 1s;
-	color:white;
-}
-.dark-navbar{
-	background-color:#383F50;
-}
-
 .product-dark{
 	background-color:#182337;
 }
@@ -329,10 +276,8 @@
 	transition:1s;
 }
 
-
-
 .login-box{
-	background-color:#37AAAC;
+	background-color:#43655A;
 	left:0%;
 	top:1%;
 	height:1%;
@@ -343,12 +288,13 @@
 	border-radius:40px;
 	padding-top:90px;
 	visibility:hidden;
+        position: absolute;
 	transition:.5s;
 	
 }
 .login-box .text-field{
 	text-items:center;
-	width:70%;
+	width:300px;
 	height:38px;
 	border-radius:18px;
 	left:15%;
@@ -359,27 +305,31 @@
 .text-field input{
 	position:inherit;
 	height:35px;
+        width: 250px;
 	float:right;
+        right:0;
 	border:none;
 	outline:none;
 	border-radius:18px;
 }
 
 .text-field i{
-	position:absolute;
+	position:relative;
 	text-size:80px;
 	top:10px;
+        float: left;
+        left:20px;
 	bottom:10px;
 	color:grey;
 }
 
 .submit-btn{
-	width:90px;
-	height:28px;
-	border-radius:20px;
-	color:grey;
-	border:none;
-	cursor:pointer;
+	width:0px;
+	height:0px;
+	border-radius:1px;
+        transition: .5s;
+        border: none;
+        
 }
 .submit-btn:hover{
 	border:3px solid;
@@ -387,7 +337,6 @@
 .login-visible{
 	visibility:visible;
 	transition:.5s;
-	background-color:#37AAAC;
 	left:37.5%;
 	top:20%;
 	height:50%;
@@ -398,3 +347,20 @@
 	border-radius:40px;
 	padding-top:90px;
 }
+.submit-btn-visible{
+        transition: .5s;
+        width:90px;
+	height:28px;
+	border-radius:20px;
+	color:grey;
+	border:none;
+	cursor:pointer;
+}
+.login-box a{
+    color:white;
+    text-decoration: underline;
+}
+
+
+
+

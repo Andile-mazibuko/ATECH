@@ -13,7 +13,7 @@
             </div>
 	</a>
         <ul class="navigation-list">
-            <li><a href=""><i class="fa fa-home" aria-hidden="true"></i></a></li>
+            <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a></li>
                 <li><a href=""><i class="fa fa-shopping-basket" aria-hidden="true"><span id="items" > </span></i></a></li>
 		<li><a href=""><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
 		<li><a href=""><i class="fa fa-phone" aria-hidden="true"></i></a></li>

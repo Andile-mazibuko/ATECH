@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" href="style.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body class="body" id="body">
@@ -13,9 +13,9 @@
             </div>
 	</a>
         <ul class="navigation-list">
-            <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+            <li><a href=""><i class="fa fa-home" aria-hidden="true"></i></a></li>
                 <li><a href=""><i class="fa fa-shopping-basket" aria-hidden="true"><span id="items" > </span></i></a></li>
-		<li><a href=""><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
+		<li><button onclick="showLogInForm()"><i class="fa fa-user-circle" aria-hidden="true"></i>login</button></li>
 		<li><a href=""><i class="fa fa-phone" aria-hidden="true"></i></a></li>
 		<li>
                     <form>
@@ -76,7 +76,7 @@
 	</button>
     </div>
         <div class="products-area" id="product-area">
-            <%for(int i = 0; i < 10; i++){%>
+           
 		<div class="product" id="product">
 		    <h3>Nvidia RTX3090 ti</h3>
 			<div class="item-img-container">
@@ -88,9 +88,28 @@
                             <i class="fa fa-shopping-basket" aria-hidden="true"></i>
 			</button>
 			<br><a href="product.jsp">veiw details</a>
-                </div>
-            <%}%>
+        </div>
+		<div class="login-box" id="login">
+			<form action="" method="post">
+				<div class="text-field">
+					<label for="username"><i class="fa fa-user-circle" aria-hidden="true"></i></label>
+					<input type="text" name="username" placeholder="Enter your username" id="username">
+				</div>
+				
+				<br>
+				<div class="text-field">
+					<label for="password"><i class="fa fa-user-circle" aria-hidden="true"></i></label>
+					<input type="password" name="password" placeholder="Enter password" id="password">
+				</div>
+				<br>
+				<input type="submit" value="LOGIN" class="submit-btn">
+			</form>
+		
+		<a href="">forgot password</a>
 	</div>
+            
+	</div>
+
     <script src="script.js"></script>
 </body>
 </html>
