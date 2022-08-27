@@ -8,7 +8,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-      
+        <link rel="stylesheet" href="adminstyle.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
         <title>JSP Page</title>
     </head>
     <body>
@@ -46,7 +48,7 @@
                 <div>
                     <span >
                         <i class="fa fa-address-book" aria-hidden="true"></i>
-                            Order history
+                        <a href="">Add item</a>
                     </span>	
 		</div>
             </a>
@@ -97,6 +99,9 @@
                 </div>
             
 	</div>
+        <script src="script.js">
+            
+        </script>
    
     </body>
 </html>
