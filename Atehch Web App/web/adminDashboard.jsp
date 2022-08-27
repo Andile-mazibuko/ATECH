@@ -1,12 +1,18 @@
+<%-- 
+    Document   : adminDashboard
+    Created on : 27 Aug 2022, 12:48:27 PM
+    Author     : andil
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head>
-	<link rel="stylesheet" href="adminstyle.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-</head>
-<body class="body" id="body">
-    <div class="navigation-bar" id="nav-bar">
+    <head>
+      
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <div class="navigation-bar" id="nav-bar">
         <a href="" >
             <div class="logo-container">
                 <img src="img/logo.png" >
@@ -76,7 +82,7 @@
 	</button>
     </div>
         <div class="products-area" id="product-area">
-            <%for(int i = 0; i < 10; i++){%>
+          
 		<div class="product" id="product">
 		    <h3>Nvidia RTX3090 ti</h3>
 			<div class="item-img-container">
@@ -89,9 +95,8 @@
 			</button>
 			<br><a href="product.jsp">veiw details</a>
                 </div>
-            <%}%>
+            
 	</div>
-    <script src="script.js"></script>
-</body>
+   
+    </body>
 </html>
-
