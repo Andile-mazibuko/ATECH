@@ -45,7 +45,7 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<html>\n");
       out.write("<head>\n");
       out.write("\t<link rel=\"stylesheet\" href=\"style.css\">\n");
-      out.write("\t\t<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css\" integrity=\"sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\" />\n");
+      out.write("\t<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css\" integrity=\"sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\" />\n");
       out.write("\n");
       out.write("</head>\n");
       out.write("<body class=\"body\" id=\"body\">\n");
@@ -56,7 +56,7 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            </div>\n");
       out.write("\t</a>\n");
       out.write("        <ul class=\"navigation-list\">\n");
-      out.write("            <li><a href=\"\"><i class=\"fa fa-home\" aria-hidden=\"true\"></i></a></li>\n");
+      out.write("            <li><a href=\"index.html\"><i class=\"fa fa-home\" aria-hidden=\"true\"></i></a></li>\n");
       out.write("                <li><a href=\"\"><i class=\"fa fa-shopping-basket\" aria-hidden=\"true\"><span id=\"items\" > </span></i></a></li>\n");
       out.write("\t\t<li><a href=\"\"><i class=\"fa fa-user-circle\" aria-hidden=\"true\"></i></a></li>\n");
       out.write("\t\t<li><a href=\"\"><i class=\"fa fa-phone\" aria-hidden=\"true\"></i></a></li>\n");
@@ -132,7 +132,7 @@ for(int i = 0; i < 10; i++){
       out.write("                            Add To Cart \n");
       out.write("                            <i class=\"fa fa-shopping-basket\" aria-hidden=\"true\"></i>\n");
       out.write("\t\t\t</button>\n");
-      out.write("\t\t\t<br><a href=\"product.html\">veiw details</a>\n");
+      out.write("\t\t\t<br><a href=\"product.jsp\">veiw details</a>\n");
       out.write("                </div>\n");
       out.write("            ");
 }
