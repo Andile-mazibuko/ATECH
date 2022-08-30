@@ -7,6 +7,11 @@
 </head>
 	<body class="body" id="body">
 			<div class="navigation-bar" id="nav-bar">
+				
+					<button class="arrow-container" align="center" onclick="closeSideBar()">
+						<div class="arrow-button" id="arrow-btn">
+						</div>
+					</button>
 				<a href="" >
 					<div class="logo-container">
 						<img src="img/logo.png" >
@@ -17,40 +22,34 @@
 					<li><a href=""><i class="fa fa-shopping-basket" aria-hidden="true"><span id="items" > </span></i></a></li>
 					<li><a href=""><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
 					<li><a href=""><i class="fa fa-phone" aria-hidden="true"></i></a></li>
-					<li>
-						<form>
+					
+						<form class="search-form">
 							<div class="search-area">
 								<label for="search"><i class="fa fa-search" aria-hidden="true"></i></label>
 								<input type="search" id="search" name="search" class="search-field" placeholder="Search for a product">
 							</div>
 						</form>				
-					</li>
+					
 				
 				</ul>
 
 			</div>
 			
 			<div class="side-bar" id="side-bar">
-				<div class="container">
-					<button class="arrow-container" align="center" onclick="closeSideBar()">
-						<div class="arrow-button" id="arrow-btn">
-						</div>
-					</button>	
-				</div>
 				<div class="side-bar-content">
 						<a href="">
 							<div>
-								<span >
+								<span>
 										<i class="fa fa-address-book" aria-hidden="true"></i>
-										Order history
+										<span class="side-contentent" id="a">Order history</span>
 								</span>	
 							</div>
 						</a>
 						<a href="">
 							<div>								
-								<span >
+								<span>
 									<i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-									Sale
+									<span class="side-contentent">Sale</span>
 								</span>	
 							</div>
 						</a>
@@ -58,7 +57,7 @@
 							<div>								
 								<span >
 									<i class="fa fa-heart" aria-hidden="true"></i>
-									My wishlist
+									<span class="side-contentent">My wishlist</span>
 								</span>	
 							</div>
 						</a>
@@ -67,7 +66,7 @@
 							<div>
 								<span >
 									<i class="fa fa-user-circle" aria-hidden="true"></i>
-									Account info
+									<span class="side-contentent">Account info</span>
 								</span>	
 							</div>
 						</a>

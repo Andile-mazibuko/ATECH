@@ -2,15 +2,16 @@
 .navigation-bar{
 	position:fixed;
 	height:10%;
-	width:85%;
+	width:100%;
 	background-color:#43655A;
 	top:0;
 	right:0;
 	transition:1s;
 }
-.close-navbar{
-	width:90%;
-	transition:1s;
+.search-form{
+	position:absolute;
+	left:40%;
+	width: 20%;
 	
 }
 .navigation-bar a:visited{
@@ -21,16 +22,15 @@
 	text-color:white;
 }
 .logo-container{
-	position:sticky;
+	position:absolute;
 	height:90%;
 	width:90px;
-	float:left;
 	border:2px solid;
 	border-radius:12px;
-	left:10px;
+	left:5%;
+	top:2%;
 }
 .logo-container img{
-	
 	height:100%;
 	width:100%;
 	border-radius:12px;
@@ -39,7 +39,7 @@
 	background-color:#889FA5;
 	position:fixed;
 	left:0;
-	height:100%;
+	height:90%;
 	width:15%;
 	bottom:0;
 	transition:width 1s;
@@ -52,9 +52,22 @@
 	padding:15px;
 	color: #DADDE2;
 	
+	
 }
+
+.side-contentent{
+	visibility:visible;
+}
+.invisible-sidecontent{
+	visibility:hidden;
+}
+
+
+
 .navigation-list{
 	float:right;
+	right:10%;
+
 }
 .navigation-bar li a{
 	text-decoration:none;
@@ -63,7 +76,7 @@
 }
 .search-area{
 	background-color:#889FA5;
-	width:230px;
+	width:100%;
 	height:30px;
 	border-radius:20px;
 	text-align:center;
@@ -76,13 +89,11 @@
 .search-field{
 	flex:1;
 	position:inherit;
-	float:right;
 	height:30px;
-	width:170px;
+	width:10%;
 	border-radius:20px;
 	border:hidden;
 	outline:none;
-	top:50%;
 	background-color:#889FA5;
 	color:white;
 	padding:10px;
@@ -104,7 +115,7 @@
 	transform:rotate(-45deg);
 	transition:1s;
 }
-.side-bar .arrow-container{
+.navigation-bar .arrow-container{
 	positon:absolute;
 	width:40px;
 	height:40px;
@@ -114,10 +125,10 @@
 	cursor:pointer;
 	border:1px solid;
 	border-color:#43655A;
-	float:right;
+	float:left;
 	top:50%;	
-	bottom:50%;
-	right:10%;
+
+
 	
 }
 .arrow-container:hover{
@@ -130,8 +141,7 @@
 	background-color:#889FA5;
 	position:absolute;
 	left:0;
-	height:100%;
-	width:10%;
+	width:5%;
 	bottom:0;
 	transition:width 1s;
 }
@@ -217,6 +227,7 @@
 }
 .side-bar-content i{
 	padding:10px;
+	
 
 }
 .products-area{
@@ -325,7 +336,7 @@
 	background-color:grey;
 }
 .close-productArea{
-	width:90%;
+	width:95%;
 	transition:1s;
 }
 
