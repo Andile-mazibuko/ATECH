@@ -4,9 +4,25 @@
         <servlet-name>StartSessionServlet</servlet-name>
         <servlet-class>atech.servlets.ac.za.StartSessionServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CreateAccountServlet</servlet-name>
+        <servlet-class>atech.servlets.ac.za.CreateAccountServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DashBaordServlet</servlet-name>
+        <servlet-class>atech.servlets.ac.za.DashBaordServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>StartSessionServlet</servlet-name>
         <url-pattern>/StartSessionServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateAccountServlet</servlet-name>
+        <url-pattern>/CreateAccountServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DashBaordServlet</servlet-name>
+        <url-pattern>/DashBaordServlet.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

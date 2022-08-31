@@ -3,6 +3,8 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -41,6 +43,8 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
+      out.write("\n");
+      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("<head>\n");
@@ -49,18 +53,23 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("</head>\n");
       out.write("<body class=\"body\" id=\"body\">\n");
+      out.write("    ");
+List<Integer>mylist= new ArrayList<>();
+      out.write("\n");
+      out.write("    \n");
+      out.write("    \n");
       out.write("    <div class=\"navigation-bar\" id=\"nav-bar\">\n");
       out.write("\t<button class=\"arrow-container\" align=\"center\" onclick=\"closeSideBar()\">\n");
       out.write("            <div class=\"arrow-button\" id=\"arrow-btn\">\n");
       out.write("            </div>\n");
       out.write("\t</button>\n");
-      out.write("            <a href=\"\" >\n");
+      out.write("            <a href=\"index.html\" >\n");
       out.write("                <div class=\"logo-container\">\n");
       out.write("                    <img src=\"img/logo.png\" >\n");
       out.write("\t\t</div>\n");
       out.write("            </a>\n");
       out.write("            <ul class=\"navigation-list\">\n");
-      out.write("                <li><a href=\"\"><i class=\"fa fa-home\" aria-hidden=\"true\"></i></a></li>\n");
+      out.write("                <li><a href=\"index.html\"><i class=\"fa fa-home\" aria-hidden=\"true\"></i></a></li>\n");
       out.write("                <li><button class=\"basket-btn\" onclick=\"proceedToCheckout()\"><i class=\"fa fa-shopping-basket\" aria-hidden=\"true\"><span id=\"items\" > </span></i></button></li>\n");
       out.write("\t\t<li><a href=\"\"><i class=\"fa fa-user-circle\" aria-hidden=\"true\"></i></a></li>\n");
       out.write("\t\t<li><a href=\"\"><i class=\"fa fa-phone\" aria-hidden=\"true\"></i></a></li>\n");
@@ -190,12 +199,8 @@ for(int i = 0; i < 10; i++){
       out.write("\t\t\n");
       out.write("\t}\n");
       out.write("\tfunction addItemOnCart(){\n");
-      out.write("            ");
-int number =12;
-      out.write("\n");
-      out.write("\t\tdocument.getElementById(\"items\").innerHTML = \"\"+");
-      out.print(number++);
-      out.write(";\n");
+      out.write("               \n");
+      out.write("\t\tdocument.getElementById(\"items\").innerHTML = \"\";\n");
       out.write("                //update session\n");
       out.write("\t}\n");
       out.write("\tfunction showLogInForm(){\n");
