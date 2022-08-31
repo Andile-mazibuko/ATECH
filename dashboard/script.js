@@ -5,14 +5,20 @@
 		let arrbtn = document.getElementById("arrow-btn");
 		let navbar = document.getElementById("nav-bar"); 		
 		let productArea = document.getElementById("product-area");
-		let span = document.getElementById("a");//testing purposes
+		let order = document.getElementById("order-his");
+		let sale = document.getElementById("sale");
+		let account = document.getElementById("account");
+		let wish = document.getElementById("wish");
 		navbar.classList.toggle("close-navbar");
 		sidebar.classList.toggle("close-side-bar");
 		arrbtn.classList.toggle("close-side-bar-btn");
 		productArea.classList.toggle("close-productArea");
-		span.classList.toggle("invisible-sidecontent");
+		order.classList.toggle("invisible-sidecontent");
+		sale.classList.toggle("invisible-sidecontent");
+		wish.classList.toggle("invisible-sidecontent");
+		account.classList.toggle("invisible-sidecontent");
 		
-	}
+		}
 	function enableDarkMode()
 	{
 		let productArea = document.getElementById("product-area");

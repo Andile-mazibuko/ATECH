@@ -57,9 +57,16 @@
 
 .side-contentent{
 	visibility:visible;
+	left:35px;
+	top:27%;
+	position:inherit;
 }
 .invisible-sidecontent{
 	visibility:hidden;
+	left:50px;
+	position:absolute;
+	float:right;
+	text-size:1px;
 }
 
 
@@ -216,17 +223,20 @@
 .side-bar-content a div:hover{
 	text-decoration:none;
 	background-color:#B1BDC5;
-	
+	padding-left:10px;
 }
 
 .side-bar-content a :hover{
-	opacity:1;
+	
 	padding-left:10px;
 	transition:.5s;
 	
 }
 .side-bar-content i{
 	padding:10px;
+	position:inherit;
+	top:30%;
+	align-items:center;
 	
 
 }
@@ -340,8 +350,6 @@
 	transition:1s;
 }
 
-
-
 .login-box{
 	background-color:#37AAAC;
 	left:0%;
@@ -409,3 +417,4 @@
 	border-radius:40px;
 	padding-top:90px;
 }
+
