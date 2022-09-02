@@ -60,6 +60,9 @@
 	left:35px;
 	top:27%;
 	position:inherit;
+        font-family: 'Bebas Neue', cursive;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 15px;
 }
 .invisible-sidecontent{
 	visibility:hidden;
@@ -266,6 +269,7 @@
 }
 .products-area .product h3{
 	color:#43655A;
+        font-family: 'Bebas Neue', cursive;
 }
 
 .item-img-container{
@@ -294,8 +298,14 @@
 }
 .products-area a{
 	text-decoration:none;
+        font-family: 'Bebas Neue', cursive;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 15px;
+        
 }
-
+.products-area a:hover{
+    text-decoration: underline;
+}
 
 
 .add-item{
@@ -304,6 +314,9 @@
 	border:none;
 	border-radius:15px;
 	cursor:pointer;
+        font-family: 'Bebas Neue', cursive;
+        font-family: 'IBM Plex Mono', monospace;
+        font-family: 'Roboto', sans-serif;
 }
 .add-item:hover{
 	border:2px solid;

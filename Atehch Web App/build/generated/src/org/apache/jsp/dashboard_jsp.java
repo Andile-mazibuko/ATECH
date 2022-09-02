@@ -3,8 +3,6 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -43,21 +41,19 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("\n");
-      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("<head>\n");
-      out.write("\t<link rel=\"stylesheet\" href=\"style.css\">\n");
-      out.write("\t\t<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css\" integrity=\"sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\" />\n");
-      out.write("\n");
+      out.write("        <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n");
+      out.write("        <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n");
+      out.write("        <link href=\"https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap\" rel=\"stylesheet\">\n");
+      out.write("        <link href=\"https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono&display=swap\" rel=\"stylesheet\">\n");
+      out.write("        <link href=\"https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono&family=Roboto&display=swap\" rel=\"stylesheet\">\n");
+      out.write("\t<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css\" integrity=\"sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\" />\n");
+      out.write("        <link rel=\"stylesheet\" href=\"style.css\">\n");
+      out.write("\t\n");
       out.write("</head>\n");
       out.write("<body class=\"body\" id=\"body\">\n");
-      out.write("    ");
-List<Integer>mylist= new ArrayList<>();
-      out.write("\n");
-      out.write("    \n");
-      out.write("    \n");
       out.write("    <div class=\"navigation-bar\" id=\"nav-bar\">\n");
       out.write("\t<button class=\"arrow-container\" align=\"center\" onclick=\"closeSideBar()\">\n");
       out.write("            <div class=\"arrow-button\" id=\"arrow-btn\">\n");
@@ -199,8 +195,12 @@ for(int i = 0; i < 10; i++){
       out.write("\t\t\n");
       out.write("\t}\n");
       out.write("\tfunction addItemOnCart(){\n");
-      out.write("               \n");
-      out.write("\t\tdocument.getElementById(\"items\").innerHTML = \"\";\n");
+      out.write("            ");
+int number =12;
+      out.write("\n");
+      out.write("\t\tdocument.getElementById(\"items\").innerHTML = \"\"+");
+      out.print(number++);
+      out.write(";\n");
       out.write("                //update session\n");
       out.write("\t}\n");
       out.write("\tfunction showLogInForm(){\n");
