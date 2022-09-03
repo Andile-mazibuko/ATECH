@@ -107,32 +107,6 @@
 .products-area a{
 	text-decoration:none;
 }
-
-
-.dark-mode{
-	
-	background-color:rgba(21, 30, 47,1);
-	transition: 1s;
-}
-
-.dark-navbar{
-	background-color:#383F50;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .product-image-container{
 	position:absolute;
 	width:30%;
