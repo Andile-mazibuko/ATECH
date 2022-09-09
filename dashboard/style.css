@@ -3,7 +3,7 @@
 	position:fixed;
 	height:10%;
 	width:100%;
-	background-color:#43655A;
+	background-color:#7AB6B6;
 	top:0;
 	right:0;
 	transition:1s;
@@ -326,7 +326,7 @@
 }
 .dark-mode{
 	
-	background-color:rgba(21, 30, 47,1);
+	background-color:#162B30;
 	transition: 1s;
 }
 
@@ -336,11 +336,11 @@
 	color:white;
 }
 .dark-navbar{
-	background-color:#383F50;
+	background-color:#162B30;
 }
 
 .product-dark{
-	background-color:#182337;
+	background-color:#889FA5;
 }
 .dark-product{
 	background-color:grey;

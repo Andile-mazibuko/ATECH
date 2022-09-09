@@ -30,26 +30,7 @@ public class StartSessionServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException
     {
-        HttpSession session = request.getSession(true); 
-      
-        GraphicsCard gpu = new GraphicsCard();
-
-        gpu.setBrand("Asus");
-        gpu.setPrice(44000.00);
-        gpu.setModel("Nvedia RTX 3090 ti");
-        gpu.setCores("1756 cuda cores");
-        gpu.setVram("24GB");
-        gpu.setType("GDDR6");
         
-        productFacade.create(gpu);
-  
-     
-      
-        
-        if(request.getParameter("username").equals("andile mazibuko") && request.getParameter("password").equals("andilemazibuko01234"))
-        {
-            request.getRequestDispatcher("adminDashboard.jsp").forward(request, response);
-        }
   
     }
     

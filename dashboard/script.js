@@ -35,11 +35,11 @@
 		
 	}
 	function addItemOnCart(){
-		let number = 0;
+		let number = parseInt(document.getElementById("text").value);
 		number++;
-		
+		number.value = number;
 		let span = document.getElementById("items").innerHTML = ""+number;
-		return number;
+		
 	}
 	function showLogInForm(){
 		let login = document.getElementById("login");
