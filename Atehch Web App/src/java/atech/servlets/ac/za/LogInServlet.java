@@ -31,17 +31,24 @@ public class LogInServlet extends HttpServlet {
     {
         HttpSession session = request.getSession(true);
         String email = request.getParameter("email");
-        String pssword = request.getParameter("password");
+        String password = request.getParameter("password");
+        Customer customer = searchAccount(email);
        
-            if(comparePassword(pssword, email))
+        if(customer != null)
+         {
+            if( customer.getPassword().equals(password))
             {
                 updateSession(session,searchAccount(email));
-                response.sendRedirect("DashBaordServlet");
-            }else
-            {
-                request.getRequestDispatcher("index.html").forward(request, response);
+                response.sendRedirect("DashBaordServlet.do");
+                
             }
-        
+         }else
+         {
+              request.getRequestDispatcher("index.html").forward(request, response);
+         }
+         
+         
+         
     }
     private Customer searchAccount(String email)
     {
@@ -57,22 +64,13 @@ public class LogInServlet extends HttpServlet {
                 //Terminate the loop
                 customer = customerAtIndex;
                 break;
+            }else
+            {
+                customer = null;
             }
         }
     
         return customer;
-    }
-    private boolean comparePassword(String password,String email)
-    {
-        Customer customer = searchAccount(email);
-        
-        if(customer.getPassword().equals(password))
-        {
-            return true;
-        }else
-        {
-            return false;
-        }
     }
     private void updateSession(HttpSession session,Customer customer)
     {

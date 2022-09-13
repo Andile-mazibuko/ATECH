@@ -36,6 +36,16 @@ public class Customer implements Serializable {
 
     @Column(name="gender")
     private String gender;
+    
+    private String type = "CUSTOMER";
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 
     @OneToMany()
     private List<Product> wishList;

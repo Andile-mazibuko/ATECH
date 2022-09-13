@@ -5,6 +5,7 @@
  */
 package atech.servlets.ac.za;
 
+import atech.entities.ac.za.Customer;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -22,15 +23,18 @@ public class DashBaordServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException 
     {
-        HttpSession session = request.getSession();
-        
-        if(session.isNew())
+        HttpSession session = request.getSession(true);
+        Customer customer = (Customer)session.getAttribute("customer");
+        String path ="";
+        if(customer.getType().equals("ADMIN"))
         {
-            session = request.getSession(true);
+            path = "adminDashboard.jsp";
+        }else
+        {
+            path = "dashboard.jsp";
         }
         
-        
-        request.getRequestDispatcher("dashboard.jsp").forward(request, response);
+        request.getRequestDispatcher(path).forward(request, response);
         
         
         
