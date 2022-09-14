@@ -255,7 +255,7 @@
 	height:100%;
 	border-radius:50%;
 	
-}
+}z
 
 .fa fa-shopping-basket span {
 	
@@ -360,6 +360,13 @@
     color:white;
     text-decoration: underline;
 }
-
+.summary-boxes{
+    position: inherit;
+    background-color: black;
+    width: 100px;
+    height: 270px;
+    top:30%;
+    left: 30%;
+}
 
 

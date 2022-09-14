@@ -1,3 +1,5 @@
+<%@page import="java.util.List"%>
+<%@page import="atech.entities.ac.za.Product"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -78,13 +80,17 @@
 			</button>
             </div>
             <div class="products-area" id="product-area">
-            <%for(int i = 0; i < 10; i++){%>
+                
+            <%
+              List<Product>products =(List<Product>)session.getAttribute("products");
+                    
+              for(int i = 0; i < products.size(); i++){%>
 		<div class="product" id="product">
 		<h3>Nvidia RTX3090 ti</h3>
 		<div class="item-img-container">
                     <img src="img/logo.png">
 		</div>
-                    <p lign="center">$100.12</p>
+                    <p lign="center">R<%=products.get(i).getPrice()%></p>
                         <button class="add-item" onclick="addItemOnCart()">
                             Add To Cart 
 			<i class="fa fa-shopping-basket" aria-hidden="true"></i>
