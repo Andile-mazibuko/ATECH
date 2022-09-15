@@ -25,17 +25,26 @@
                 <li><button class="basket-btn" onclick="proceedToCheckout()"><i class="fa fa-shopping-basket" aria-hidden="true"><span id="items" > </span></i></button></li>
 		<li><a href=""><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
 		<li><a href=""><i class="fa fa-phone" aria-hidden="true"></i></a></li>
-            				
+
             </ul>
     </div>
     <div class="side-bar" >
+	       <div class="add-item">
+            <button><i class="fa fa-cart-plus" aria-hidden="true"></i> Add item</button>
+        </div>
+        <div class="add-item">
+            <button><i class="fa fa-list-alt" aria-hidden="true"></i> List Items</button>
+        </div>
+		<div class="add-item">
+            <button><i class="fa fa-table" aria-hidden="true"></i> List Users</button>
+        </div>
+		<div class="add-item">
+            <button><i class="fa fa-cart-plus" aria-hidden="true"></i> Add item</button>
+        </div>
     </div>
     <div class="content-box">
-        <%for(int i = 0; i < 2; i++){%>
         <div class="content">kd</div>
-        <br>
-        <%}%>
-       
+        <div class="content">kd</div>
     </div>
 </body>
 </html>

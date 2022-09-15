@@ -78,13 +78,13 @@
 .add-item{
     position: sticky;
     background: white;
-    opacity:0.4;
+	opacity:0.4;
     width: 100%;
 }
 .add-item button{
     position: inherit;
     width: 100%;
     background: transparent;
-    border: none;
-    height: 10%;
+	border: none;
+	height: 10%;
 }

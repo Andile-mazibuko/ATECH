@@ -64,6 +64,7 @@
     display: flex;
     justify-content: center;
     
+    
    
 }
 .content{
@@ -71,5 +72,19 @@
     width: 10%;
     height: 10%;
     background: green;
-    padding: 10px;
+	padding: 10px;
+}
+
+.add-item{
+    position: sticky;
+    background: white;
+    opacity:0.4;
+    width: 100%;
+}
+.add-item button{
+    position: inherit;
+    width: 100%;
+    background: transparent;
+    border: none;
+    height: 10%;
 }

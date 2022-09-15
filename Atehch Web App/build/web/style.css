@@ -261,6 +261,7 @@
 	padding:10px;
 	height:300px;
 	margin:20px;
+        box-shadow: 2px 2px 2px 0px grey;
 	border-radius:20px;
 	background-color:aliceblue;
 	padding-left :10px;
