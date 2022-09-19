@@ -29,13 +29,13 @@
             </ul>
     </div>
     <div class="side-bar" >
-	       <div class="add-item">
+	<div class="add-item">
             <button><i class="fa fa-cart-plus" aria-hidden="true"></i> Add item</button>
         </div>
         <div class="add-item">
             <button><i class="fa fa-list-alt" aria-hidden="true"></i> List Items</button>
         </div>
-		<div class="add-item">
+	<div class="add-item">
             <button><i class="fa fa-table" aria-hidden="true"></i> List Users</button>
         </div>
 		<div class="add-item">

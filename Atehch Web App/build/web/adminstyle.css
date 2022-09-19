@@ -58,7 +58,7 @@
     height: 90%;
     right: 5%;
     bottom: 0;
-    background: blue;
+    background: #B1BDC5;
     position: fixed;
     box-shadow: 0px 10px 9px 10px grey;
     display: flex;
@@ -72,7 +72,7 @@
     width: 10%;
     height: 10%;
     background: green;
-	padding: 10px;
+    padding: 10px;
 }
 
 .add-item{
@@ -80,6 +80,7 @@
     background: white;
     opacity:0.4;
     width: 100%;
+    height: 10%;
 }
 .add-item button{
     position: inherit;
