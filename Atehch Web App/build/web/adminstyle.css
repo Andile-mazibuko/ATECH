@@ -1,3 +1,13 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24 Sep 2022, 11:28:59 PM
+    Author     : andil
+*/
+
 
 .navigation-bar{
 	position:fixed;
@@ -63,29 +73,47 @@
     box-shadow: 0px 10px 9px 10px grey;
     display: flex;
     justify-content: center;
-    
-    
+    flex-wrap: wrap;
+    padding-left: 10px;
    
 }
 .content{
     position: relative;
-    width: 10%;
-    height: 10%;
+    width: 20%;
+    height: 30%;
     background: green;
     padding: 10px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+	
+}
+.content div{
+    background-color:white;
+    position: absolute;
+    width: 150px;
+    height:150px;
+    box-shadow: 5px 5px 5px 0px grey;
+    border-radius: 50%;
+    bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;	
+}
+.content div span{
+	font-size: 50px;
 }
 
 .add-item{
     position: sticky;
     background: white;
-    opacity:0.4;
+	opacity:0.4;
     width: 100%;
-    height: 10%;
 }
 .add-item button{
     position: inherit;
     width: 100%;
     background: transparent;
-    border: none;
-    height: 10%;
+	border: none;
+	height: 10%;
 }

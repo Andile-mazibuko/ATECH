@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="addItem.css">
+    </head>
+    <body>
+        <div class="navigation-bar">
+            
+        </div>
+        
+        
+        <div class="area">
+            <select class="category" id="category" required="" onchange = "view()">
+                <option>
+                    -select type- 
+                </option>
+                <option value="GPU">
+                    GPU
+                </option>
+                <option value="computer">
+                    Computer
+                </option>
+            </select>
+            <div class="form-container" id="container">
+                <form action="AddItemServlet.do" method="post">
+                    <table border="0">
+                        <tbody>
+                            <tr>
+                                <td>Brand:</td>
+                                <td><input type="text" name="name" placeholder="Asus" required=""></td>
+                            </tr>
+                            <tr>
+                                <td>Motherboard:</td>
+                                <td><input type="text" name="motherboard" placeholder="Prime B660M-K 04" required="" ></td>
+                            </tr>
+                            <tr>
+                                <td>Ram</td>
+                                <td><input type="text" name="ram" placeholder="16GB 2666mhz" required=""></td>
+                            </tr>
+                            <tr>
+                                <td>Processor</td>
+                                <td><input type="text" name="processor"placeholder="i5 12400 6c 12t" required=""></td>
+                            </tr>
+                            <tr>
+                                <td>GPU:</td>
+                                <td><input type="text" name="gpu" placeholder="atech rtx 3090"></td>
+                            </tr>
+                            <tr>
+                                <td>Price:</td>
+                                <td><input type="number" name="price" placeholder="15000" required=""></td>
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+                    <input type="submit" id="submit">
+                </form>
+            </div>
+            
+            
+        </div>
+        <form action="AddItemServlet.do" method="POST">
+            
+        </form>
+        
+        <script type="text/javascript">
+            function view(){
+                var category = document.getElementById("category").value;
+                let container = document.getElementById("container");
+               
+                    if(category === "computer")
+                    {
+                        container.classList.toggle("visible");
+                    }else if(category === "GPU")
+                    {
+                    
+                    
+                    }
+            }    
+           
+        </script>
+    </body>
+</html>

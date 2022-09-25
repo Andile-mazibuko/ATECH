@@ -3,12 +3,11 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
-import java.util.List;
-import atech.entities.ac.za.Product;
+import atech.entities.ac.za.Customer;
 import java.util.List;
 import atech.entities.ac.za.Product;
 
-public final class adminDashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class adminHome_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -34,7 +33,7 @@ public final class adminDashboard_jsp extends org.apache.jasper.runtime.HttpJspB
     PageContext _jspx_page_context = null;
 
     try {
-      response.setContentType("text/html");
+      response.setContentType("text/html;charset=UTF-8");
       pageContext = _jspxFactory.getPageContext(this, request, response,
       			null, true, 8192, true);
       _jspx_page_context = pageContext;
@@ -45,6 +44,8 @@ public final class adminDashboard_jsp extends org.apache.jasper.runtime.HttpJspB
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
+      out.write("\n");
+      out.write("\n");
       out.write("\n");
       out.write("\n");
       out.write("\n");
@@ -93,20 +94,36 @@ public final class adminDashboard_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("    </div>\n");
       out.write("    <div class=\"content-box\">\n");
       out.write("        <div class=\"content\">\n");
-      out.write("\t\t\t<h3>No Of users</h3>\n");
-      out.write("\t\t\t<div>\n");
-      out.write("\t\t\t\t<span>143<span>\n");
-      out.write("\t\t\t</div>\n");
-      out.write("\t\t</div>\n");
-      out.write("\t\t <div class=\"content\"></div>\n");
-      out.write("\t\t  <div class=\"content\"></div>\n");
+      out.write("            <h3>No Of users</h3>\n");
+      out.write("            <div>\n");
+      out.write("                <span>");
+      out.print(((List<Customer>)session.getAttribute("customers")).size());
+      out.write("</span>\n");
+      out.write("            </div>\n");
+      out.write("\t</div>\n");
       out.write("        \n");
-      out.write("\t\t<br>\n");
+      out.write("        <div class=\"content\">\n");
+      out.write("            <h3>No Of Products</h3>\n");
+      out.write("            <div>\n");
+      out.write("                <span>");
+      out.print(((List<Customer>)session.getAttribute("products")).size());
+      out.write("</span>\n");
+      out.write("            </div>\n");
+      out.write("\t</div>\n");
+      out.write("        \n");
+      out.write("        <div class=\"content\">\n");
+      out.write("            <h3>No Of users</h3>\n");
+      out.write("            <div>\n");
+      out.write("                <span>143</span>\n");
+      out.write("            </div>\n");
+      out.write("\t</div>\n");
+      out.write("\t\t\n");
       out.write("        \n");
       out.write("\n");
       out.write("    </div>\n");
       out.write("</body>\n");
       out.write("</html>\n");
+      out.write("\n");
       out.write("\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){

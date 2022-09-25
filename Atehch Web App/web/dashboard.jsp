@@ -1,5 +1,9 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="atech.entities.ac.za.GraphicsCard"%>
+<%@page import="atech.entities.ac.za.Computer"%>
 <%@page import="java.util.List"%>
 <%@page import="atech.entities.ac.za.Product"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +18,7 @@
         <title>dashboard</title>
 </head>
 <body class="body" id="body">
-    <div class="navigation-bar" id="nav-bar">
+   <div class="navigation-bar" id="nav-bar">
 	<button class="arrow-container" align="center" onclick="closeSideBar()">
             <div class="arrow-button" id="arrow-btn">
             </div>
@@ -83,19 +87,35 @@
                 
             <%
               List<Product>products =(List<Product>)session.getAttribute("products");
+                    int index = 0;
+              for(int i=0; i < products.size(); i++){%>
+		<div class="product" id="<%=i%>">
+                    <% 
+                        Product product = products.get(i);
+                        String name="";
+                        if(product instanceof Computer)
+                        {
+                            Computer comp = (Computer)product;
+                            name = comp.getBrand()+" "+ comp.getProcessor()+" Desktop";
+                        }else
+                        {
+                            GraphicsCard gpu =(GraphicsCard)product;
+                            name = gpu.getBrand()+" "+gpu.getModel();
+                        }
+                        
+      
+                    %>
                     
-              for(int i = 0; i < products.size(); i++){%>
-		<div class="product" id="product">
-		<h3>Nvidia RTX3090 ti</h3>
+                    <h3><%=name%></h3>
 		<div class="item-img-container">
                     <img src="img/logo.png">
 		</div>
-                    <p lign="center">R<%=products.get(i).getPrice()%></p>
-                        <button class="add-item" onclick="addItemOnCart()">
+                    <p lign="center">R<%=product.getPrice()%></p>
+                    <button class="add-item" id="<%=i%><%session.setAttribute("num", i+"");%>" onclick="addItemOnCart(this.id)">
                             Add To Cart 
 			<i class="fa fa-shopping-basket" aria-hidden="true"></i>
                         </button>
-                        <br><a href="product.jsp">veiw details</a>
+                        <br><a href="product.jsp">veiw product</a>
 		</div>
             <%}%>
             </div>
@@ -134,25 +154,48 @@
 		wish.classList.toggle("invisible-sidecontent");
 		account.classList.toggle("invisible-sidecontent");
 		
-		}
+            }
 	function enableDarkMode()
 	{
 		let productArea = document.getElementById("product-area");
 		let product = document.getElementById("product");
 		let body = document.getElementById("body");
 		let sidebar = document.getElementById("side-bar");
-		let  arrbtn = document.getElementById("arrow-btn");
 		let navbar = document.getElementById("nav-bar"); 
-		productArea.classList.toggle("product-dark");
+		sidebar.classList.toggle("dark-mode-sidebar");
+                productArea.classList.toggle("product-dark");
+                navbar.classList.toggle("dark-navbar");
 		product.classList.toggle("dark-product");
 		body.classList.toggle("dark-mode");
-		navbar.classList.toggle("dark-navbar");
-		sidebar.classList.toggle("dark-mode-sidebar");
+		
+		
 		
 	}
-	function addItemOnCart(){
-            <%int number =12;%>
-		document.getElementById("items").innerHTML = ""+<%=number++%>;
+        
+       /* var buttons = document.getElementsByTagName("button");
+        var length = buttons.length;
+        for(var i=0; i< length; i += 1)
+        {
+            buttons[i].onclick = function(e)
+            {
+                alert(this.id);
+                
+                       
+            }
+            
+        }
+        */
+        
+        
+        
+	function addItemOnCart(id){
+                
+                <%--<%session.setAttribute("num",%><%%>id);<%%>--%> 
+		document.getElementById("items").innerHTML = ""+id;
+                <%
+                    System.out.println(session.getAttribute("num"));
+                    session.setAttribute("num", null);
+                %>
                 //update session
 	}
 	function showLogInForm(){
@@ -165,6 +208,8 @@
             let basket = document.getElementById("checkout-box");
             basket.classList.toggle("show-checkout");
         }
+        
+        
             </script>
 </body>
 </html>

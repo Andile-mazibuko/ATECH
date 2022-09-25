@@ -3,6 +3,11 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import java.util.ArrayList;
+import atech.entities.ac.za.GraphicsCard;
+import atech.entities.ac.za.Computer;
+import java.util.List;
+import atech.entities.ac.za.Product;
 
 public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -30,7 +35,7 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
     PageContext _jspx_page_context = null;
 
     try {
-      response.setContentType("text/html");
+      response.setContentType("text/html;charset=UTF-8");
       pageContext = _jspxFactory.getPageContext(this, request, response,
       			null, true, 8192, true);
       _jspx_page_context = pageContext;
@@ -41,9 +46,16 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("<head>\n");
+      out.write("        <link rel=\"icon\" href=\"img/logo.png\" >\n");
       out.write("        <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n");
       out.write("        <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n");
       out.write("        <link href=\"https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap\" rel=\"stylesheet\">\n");
@@ -51,10 +63,10 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <link href=\"https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono&family=Roboto&display=swap\" rel=\"stylesheet\">\n");
       out.write("\t<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css\" integrity=\"sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\" />\n");
       out.write("        <link rel=\"stylesheet\" href=\"style.css\">\n");
-      out.write("\t\n");
+      out.write("        <title>dashboard</title>\n");
       out.write("</head>\n");
       out.write("<body class=\"body\" id=\"body\">\n");
-      out.write("    <div class=\"navigation-bar\" id=\"nav-bar\">\n");
+      out.write("   <div class=\"navigation-bar\" id=\"nav-bar\">\n");
       out.write("\t<button class=\"arrow-container\" align=\"center\" onclick=\"closeSideBar()\">\n");
       out.write("            <div class=\"arrow-button\" id=\"arrow-btn\">\n");
       out.write("            </div>\n");
@@ -120,20 +132,50 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t</button>\n");
       out.write("            </div>\n");
       out.write("            <div class=\"products-area\" id=\"product-area\">\n");
+      out.write("                \n");
       out.write("            ");
-for(int i = 0; i < 10; i++){
+
+              List<Product>products =(List<Product>)session.getAttribute("products");
+                    int index = 0;
+              for(int i=0; i < products.size(); i++){
       out.write("\n");
-      out.write("\t\t<div class=\"product\" id=\"product\">\n");
-      out.write("\t\t<h3>Nvidia RTX3090 ti</h3>\n");
+      out.write("\t\t<div class=\"product\" id=\"");
+      out.print(i);
+      out.write("\">\n");
+      out.write("                    ");
+ 
+                        Product product = products.get(i);
+                        String name="";
+                        if(product instanceof Computer)
+                        {
+                            Computer comp = (Computer)product;
+                            name = comp.getBrand()+" "+ comp.getProcessor()+" Desktop";
+                        }else
+                        {
+                            GraphicsCard gpu =(GraphicsCard)product;
+                            name = gpu.getBrand()+" "+gpu.getModel();
+                        }
+                        
+      
+                    
+      out.write("\n");
+      out.write("                    \n");
+      out.write("                    <h3>");
+      out.print(name);
+      out.write("</h3>\n");
       out.write("\t\t<div class=\"item-img-container\">\n");
       out.write("                    <img src=\"img/logo.png\">\n");
       out.write("\t\t</div>\n");
-      out.write("                    <p lign=\"center\">$100.12</p>\n");
-      out.write("                        <button class=\"add-item\" onclick=\"addItemOnCart()\">\n");
+      out.write("                    <p lign=\"center\">R");
+      out.print(product.getPrice());
+      out.write("</p>\n");
+      out.write("                    <button class=\"add-item\" id=\"");
+      out.print(i);
+      out.write("\" onclick=\"addItemOnCart(this.id)\">\n");
       out.write("                            Add To Cart \n");
       out.write("\t\t\t<i class=\"fa fa-shopping-basket\" aria-hidden=\"true\"></i>\n");
       out.write("                        </button>\n");
-      out.write("                        <br><a href=\"product.html\">veiw details</a>\n");
+      out.write("                        <br><a href=\"product.jsp\">veiw product</a>\n");
       out.write("\t\t</div>\n");
       out.write("            ");
 }
@@ -178,29 +220,45 @@ for(int i = 0; i < 10; i++){
       out.write("\t\twish.classList.toggle(\"invisible-sidecontent\");\n");
       out.write("\t\taccount.classList.toggle(\"invisible-sidecontent\");\n");
       out.write("\t\t\n");
-      out.write("\t\t}\n");
+      out.write("            }\n");
       out.write("\tfunction enableDarkMode()\n");
       out.write("\t{\n");
       out.write("\t\tlet productArea = document.getElementById(\"product-area\");\n");
       out.write("\t\tlet product = document.getElementById(\"product\");\n");
       out.write("\t\tlet body = document.getElementById(\"body\");\n");
       out.write("\t\tlet sidebar = document.getElementById(\"side-bar\");\n");
-      out.write("\t\tlet  arrbtn = document.getElementById(\"arrow-btn\");\n");
       out.write("\t\tlet navbar = document.getElementById(\"nav-bar\"); \n");
-      out.write("\t\tproductArea.classList.toggle(\"product-dark\");\n");
+      out.write("\t\tsidebar.classList.toggle(\"dark-mode-sidebar\");\n");
+      out.write("                productArea.classList.toggle(\"product-dark\");\n");
+      out.write("                navbar.classList.toggle(\"dark-navbar\");\n");
       out.write("\t\tproduct.classList.toggle(\"dark-product\");\n");
       out.write("\t\tbody.classList.toggle(\"dark-mode\");\n");
-      out.write("\t\tnavbar.classList.toggle(\"dark-navbar\");\n");
-      out.write("\t\tsidebar.classList.toggle(\"dark-mode-sidebar\");\n");
+      out.write("\t\t\n");
+      out.write("\t\t\n");
       out.write("\t\t\n");
       out.write("\t}\n");
-      out.write("\tfunction addItemOnCart(){\n");
-      out.write("            ");
-int number =12;
-      out.write("\n");
-      out.write("\t\tdocument.getElementById(\"items\").innerHTML = \"\"+");
-      out.print(number++);
-      out.write(";\n");
+      out.write("        \n");
+      out.write("       /* var buttons = document.getElementsByTagName(\"button\");\n");
+      out.write("        var length = buttons.length;\n");
+      out.write("        for(var i=0; i< length; i += 1)\n");
+      out.write("        {\n");
+      out.write("            buttons[i].onclick = function(e)\n");
+      out.write("            {\n");
+      out.write("                alert(this.id);\n");
+      out.write("                \n");
+      out.write("                       \n");
+      out.write("            }\n");
+      out.write("            \n");
+      out.write("        }\n");
+      out.write("        */\n");
+      out.write("        \n");
+      out.write("        \n");
+      out.write("        \n");
+      out.write("\tfunction addItemOnCart(id){\n");
+      out.write("                \n");
+      out.write("                ");
+      out.write(" \n");
+      out.write("\t\tdocument.getElementById(\"items\").innerHTML = \"\"+id;\n");
       out.write("                //update session\n");
       out.write("\t}\n");
       out.write("\tfunction showLogInForm(){\n");
@@ -213,6 +271,8 @@ int number =12;
       out.write("            let basket = document.getElementById(\"checkout-box\");\n");
       out.write("            basket.classList.toggle(\"show-checkout\");\n");
       out.write("        }\n");
+      out.write("        \n");
+      out.write("        \n");
       out.write("            </script>\n");
       out.write("</body>\n");
       out.write("</html>\n");

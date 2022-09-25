@@ -63,16 +63,35 @@
     box-shadow: 0px 10px 9px 10px grey;
     display: flex;
     justify-content: center;
-    
-    
+    flex-wrap: wrap;
+    padding-left: 10px;
    
 }
 .content{
     position: relative;
-    width: 10%;
-    height: 10%;
+    width: 20%;
+    height: 30%;
     background: green;
-	padding: 10px;
+    padding: 10px;
+    margin: 20px;
+	display: flex;
+	justify-content: center;
+	
+}
+.content div{
+	background-color:white;
+	position: absolute;
+	width: 150px;
+	height:150px;
+	box-shadow: 5px 5px 5px 0px grey;
+	border-radius: 50%;
+	bottom: 5%;
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+}
+.content div span{
+	font-size: 50px;
 }
 
 .add-item{

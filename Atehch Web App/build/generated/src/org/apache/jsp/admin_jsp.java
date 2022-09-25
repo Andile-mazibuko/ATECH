@@ -5,10 +5,8 @@ import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 import java.util.List;
 import atech.entities.ac.za.Product;
-import java.util.List;
-import atech.entities.ac.za.Product;
 
-public final class adminDashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class admin_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -34,7 +32,7 @@ public final class adminDashboard_jsp extends org.apache.jasper.runtime.HttpJspB
     PageContext _jspx_page_context = null;
 
     try {
-      response.setContentType("text/html");
+      response.setContentType("text/html;charset=UTF-8");
       pageContext = _jspxFactory.getPageContext(this, request, response,
       			null, true, 8192, true);
       _jspx_page_context = pageContext;
@@ -45,6 +43,7 @@ public final class adminDashboard_jsp extends org.apache.jasper.runtime.HttpJspB
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
+      out.write("\n");
       out.write("\n");
       out.write("\n");
       out.write("\n");
@@ -77,7 +76,7 @@ public final class adminDashboard_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("\n");
       out.write("            </ul>\n");
       out.write("    </div>\n");
-      out.write("     <div class=\"side-bar\" >\n");
+      out.write("    <div class=\"side-bar\" >\n");
       out.write("\t<div class=\"add-item\">\n");
       out.write("            <a href=\"addItem.html\"><button><i class=\"fa fa-cart-plus\" aria-hidden=\"true\"></i> Add item</button></a>\n");
       out.write("        </div>\n");
@@ -92,18 +91,8 @@ public final class adminDashboard_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("        </div>\n");
       out.write("    </div>\n");
       out.write("    <div class=\"content-box\">\n");
-      out.write("        <div class=\"content\">\n");
-      out.write("\t\t\t<h3>No Of users</h3>\n");
-      out.write("\t\t\t<div>\n");
-      out.write("\t\t\t\t<span>143<span>\n");
-      out.write("\t\t\t</div>\n");
-      out.write("\t\t</div>\n");
-      out.write("\t\t <div class=\"content\"></div>\n");
-      out.write("\t\t  <div class=\"content\"></div>\n");
-      out.write("        \n");
-      out.write("\t\t<br>\n");
-      out.write("        \n");
-      out.write("\n");
+      out.write("        <div class=\"content\">kd</div>\n");
+      out.write("        <div class=\"content\">kd</div>\n");
       out.write("    </div>\n");
       out.write("</body>\n");
       out.write("</html>\n");

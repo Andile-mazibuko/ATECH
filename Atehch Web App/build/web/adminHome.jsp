@@ -1,3 +1,11 @@
+<%-- 
+    Document   : adminHome
+    Created on : 24 Sep 2022, 11:28:00 PM
+    Author     : andil
+--%>
+
+<%@page import="atech.entities.ac.za.Customer"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.util.List"%>
 <%@page import="atech.entities.ac.za.Product"%>
 <!DOCTYPE html>
@@ -28,24 +36,46 @@
 
             </ul>
     </div>
-    <div class="side-bar" >
+     <div class="side-bar" >
 	<div class="add-item">
-            <button><i class="fa fa-cart-plus" aria-hidden="true"></i> Add item</button>
+            <a href="addItem.html"><button><i class="fa fa-cart-plus" aria-hidden="true"></i> Add item</button></a>
         </div>
         <div class="add-item">
-            <button><i class="fa fa-list-alt" aria-hidden="true"></i> List Items</button>
+           <a href=""> <button><i class="fa fa-list-alt" aria-hidden="true"></i> List Items</button></a>
         </div>
 	<div class="add-item">
-            <button><i class="fa fa-table" aria-hidden="true"></i> List Users</button>
+            <a href=""><button><i class="fa fa-table" aria-hidden="true"></i> List Users</button></a>
         </div>
-		<div class="add-item">
-            <button><i class="fa fa-cart-plus" aria-hidden="true"></i> Add item</button>
+	<div class="add-item">
+            <a href=""><button><i class="fa fa-cart-plus" aria-hidden="true"></i> Add item</button></a>
         </div>
     </div>
     <div class="content-box">
-        <div class="content">kd</div>
-        <div class="content">kd</div>
+        <div class="content">
+            <h3>No Of users</h3>
+            <div>
+                <span><%=((List<Customer>)session.getAttribute("customers")).size()%></span>
+            </div>
+	</div>
+        
+        <div class="content">
+            <h3>No Of Products</h3>
+            <div>
+                <span><%=((List<Customer>)session.getAttribute("products")).size()%></span>
+            </div>
+	</div>
+        
+        <div class="content">
+            <h3>No Of users</h3>
+            <div>
+                <span>143</span>
+            </div>
+	</div>
+		
+        
+
     </div>
 </body>
 </html>
+
 

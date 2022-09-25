@@ -34,7 +34,7 @@ public class DashBaordServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException 
     {
-        HttpSession session = request.getSession(true);
+        HttpSession session = request.getSession();
         Customer customer = (Customer)session.getAttribute("customer");
         
        
@@ -42,7 +42,7 @@ public class DashBaordServlet extends HttpServlet {
         if(customer.getType().equals("ADMIN"))
         {
             updateAdminSession(session);
-            path = "adminDashboard.jsp";
+            path = "adminHome.jsp";
         }else
         {
             updateCustomerSession(session, getAllProducts());
@@ -61,12 +61,14 @@ public class DashBaordServlet extends HttpServlet {
     {
         session.setAttribute("products", proudcts);
     }
-    private Integer findAllCustomers()
-    {
-        return customerFacade.findAll().size()-1;
-    }
+
     private void updateAdminSession(HttpSession session)
     {
-        session.setAttribute("customersNo", findAllCustomers());
+        session.setAttribute("customers", getAllUsers());
+        session.setAttribute("products", getAllProducts());
+    }
+    private List<Customer> getAllUsers()
+    {
+        return customerFacade.findAll();
     }
 }
