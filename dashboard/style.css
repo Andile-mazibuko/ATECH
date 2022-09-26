@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300&display=swap');
 body{
 	background: #B1BDC5;
 }
@@ -21,6 +23,7 @@ body{
 	top: 10%;
 	color: white;
 	transform: rotate(-75deg);
+	font-family: 'Merienda One', cursive;
 }
 .right{
 	position: fixed;
@@ -77,6 +80,7 @@ body{
 	border:none;
 	outline:none;
 	background: #B1BDC5;
+	font-family: 'Big Shoulders Display', cursive;
 	
  }
  label{
@@ -103,9 +107,11 @@ body{
 	position: absolute;
 	bottom: 30px;
 	color: grey ;
+	font-family: 'Merienda One', cursive;
 }
 .signup a {
 	color: white;
+	font-family: 'Merienda One', cursive;
 }
 
 @keyframes mymove {

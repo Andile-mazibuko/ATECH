@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&display=swap');
+
 body{
 	background: #B1BDC5;
 }
@@ -21,6 +23,7 @@ body{
 	top: 10%;
 	color: white;
 	transform: rotate(-75deg);
+        font-family: 'Big Shoulders Display', cursive;
 }
 .right{
 	position: fixed;
@@ -77,6 +80,7 @@ body{
 	border:none;
 	outline:none;
 	background: #B1BDC5;
+        font-family: 'Big Shoulders Display', cursive;
 	
  }
  label{
@@ -87,7 +91,7 @@ body{
  }
  .submit-btn{
 	transition: .5s;
-    width:90px;
+        width:90px;
 	height:28px;
 	border-radius:20px;
 	color:grey;
@@ -106,6 +110,13 @@ body{
 }
 .signup a {
 	color: white;
+        font-family: 'Big Shoulders Display', cursive;
+}
+.forgot-pass{
+    color: white;
+    float: right;
+    position: inherit;
+    
 }
 
 @keyframes mymove {
