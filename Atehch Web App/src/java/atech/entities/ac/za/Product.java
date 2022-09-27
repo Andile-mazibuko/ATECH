@@ -62,7 +62,7 @@ public class Product implements Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+ 
     
     
-
 }

@@ -87,7 +87,6 @@
                 
             <%
               List<Product>products =(List<Product>)session.getAttribute("products");
-                    int index = 0;
               for(int i=0; i < products.size(); i++){%>
 		<div class="product" id="<%=i%>">
                     <% 
@@ -111,7 +110,7 @@
                     <img src="img/logo.png">
 		</div>
                     <p lign="center">R<%=product.getPrice()%></p>
-                    <button class="add-item" id="<%=i%><%session.setAttribute("num", i+"");%>" onclick="addItemOnCart(this.id)">
+                    <button name="add-item" value="<%=i%>" class="add-item" id="<%=i%>" onclick="addItemOnCart(this.id)">
                             Add To Cart 
 			<i class="fa fa-shopping-basket" aria-hidden="true"></i>
                         </button>
@@ -190,13 +189,11 @@
         
 	function addItemOnCart(id){
                 
-                <%--<%session.setAttribute("num",%><%%>id);<%%>--%> 
 		document.getElementById("items").innerHTML = ""+id;
                 <%
-                    System.out.println(session.getAttribute("num"));
+                    System.out.println(request.getParameter("add-item"));
                     session.setAttribute("num", null);
                 %>
-                //update session
 	}
 	function showLogInForm(){
 		let login = document.getElementById("login");

@@ -29,7 +29,7 @@ public class Computer extends Product implements Serializable {
     
    @Column(nullable = false)
     private String processor;//e.g i5 12400f/6 cores 12 threads
-
+          
     public Computer() {
     }
 

@@ -81,7 +81,7 @@ and open the template in the editor.
     position: relative;
     width: 20%;
     height: 30%;
-    background: green;
+    background: #43655A;
     padding: 10px;
     margin: 20px;
     display: flex;
@@ -107,7 +107,7 @@ and open the template in the editor.
 .add-item{
     position: sticky;
     background: white;
-	opacity:0.4;
+    opacity:0.4;
     width: 100%;
 }
 .add-item button{

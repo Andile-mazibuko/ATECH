@@ -39,7 +39,7 @@ public class DashBaordServlet extends HttpServlet {
         
        
         String path ="";
-        if(customer.getType().equals("ADMIN"))
+        if(customer.getType().equalsIgnoreCase("ADMIN"))
         {
             updateAdminSession(session);
             path = "adminHome.jsp";

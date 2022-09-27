@@ -14,7 +14,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -29,13 +28,12 @@ public class AddItemServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException
     {
-        HttpSession session = request.getSession();
         String category = request.getParameter("category");
         String brand = request.getParameter("name");
         Double price = Double.parseDouble(request.getParameter("price"));
         Product product;
         
-        
+        System.out.println(category);
             String motherboard = request.getParameter("motherboard");
             String processor = request.getParameter("processor");
             String ram = request.getParameter("ram");
@@ -55,7 +53,7 @@ public class AddItemServlet extends HttpServlet {
         product.setGpu(gpu);
         product.setMotherboard(motherboard);
         product.setRam(ram);
-        
+
         return product;
     }
     private void addProduct(Product product)
