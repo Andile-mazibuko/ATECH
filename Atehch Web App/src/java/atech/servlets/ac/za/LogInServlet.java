@@ -6,8 +6,10 @@
 package atech.servlets.ac.za;
 
 import atech.entities.ac.za.Customer;
+import atech.entities.ac.za.Product;
 import atech.sessions.ac.za.CustomerFacadeLocal;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
@@ -42,13 +44,24 @@ public class LogInServlet extends HttpServlet {
                 response.sendRedirect("DashBaordServlet.do");
                 
             }
+            else{System.out.println("null");}
          }else
          {
               request.getRequestDispatcher("index.html").forward(request, response);
          }
          
          
+    }
+    
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    throws ServletException, IOException
+    {
+         HttpSession session = request.getSession();
+         updateSession(session,(Customer)session.getAttribute("customer"));
          
+         response.sendRedirect("DashBaordServlet.do");
+       
     }
     private Customer searchAccount(String email)
     {
@@ -75,6 +88,7 @@ public class LogInServlet extends HttpServlet {
     private void updateSession(HttpSession session,Customer customer)
     {
         session.setAttribute("customer", customer);
+        session.setAttribute("tobuy",new ArrayList<>());
         
     }
 

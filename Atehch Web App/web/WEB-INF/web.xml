@@ -16,6 +16,10 @@
         <servlet-name>AddItemServlet</servlet-name>
         <servlet-class>atech.servlets.ac.za.AddItemServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GetProductServelt</servlet-name>
+        <servlet-class>atech.servlets.ac.za.GetProductServelt</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CreateAccountServlet</servlet-name>
         <url-pattern>/CreateAccountServlet.do</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>AddItemServlet</servlet-name>
         <url-pattern>/AddItemServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetProductServelt</servlet-name>
+        <url-pattern>/GetProductServelt.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

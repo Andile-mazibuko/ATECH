@@ -8,6 +8,7 @@ package atech.servlets.ac.za;
 import atech.entities.ac.za.Customer;
 import atech.sessions.ac.za.CustomerFacadeLocal;
 import java.io.IOException;
+import java.util.ArrayList;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -44,7 +45,7 @@ public class CreateAccountServlet extends HttpServlet {
         
         updateSession(session, customer);
         
-        response.sendRedirect("DashBaordServlet.do");
+        response.sendRedirect("LogInServlet.do");
     
     }
     private Customer createCustomer(long id,String name,String lastname,String gender,String email, String password)
@@ -56,6 +57,7 @@ public class CreateAccountServlet extends HttpServlet {
         customer.setGender(gender);
         customer.setEmail(email);
         customer.setPassword(password);
+        customer.setWishList(new ArrayList<>());
         return customer;
     }
     private void updateSession(HttpSession session,Customer customer)

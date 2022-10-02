@@ -28,9 +28,10 @@
                     <img src="img/logo.png" >
 		</div>
             </a>
+            <% List<Product> tobuy = (List<Product> )session.getAttribute("tobuy");%>
             <ul class="navigation-list">
                 <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-                <li><button class="basket-btn" onclick="proceedToCheckout()"><i class="fa fa-shopping-basket" aria-hidden="true"><span id="items" > </span></i></button></li>
+                <li><button class="basket-btn" onclick="proceedToCheckout()"><i class="fa fa-shopping-basket" aria-hidden="true"><span id="items" ><%=tobuy.size()%> </span></i></button></li>
 		<li><a href=""><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
 		<li><a href=""><i class="fa fa-phone" aria-hidden="true"></i></a></li>
             				
@@ -110,23 +111,35 @@
                     <img src="img/logo.png">
 		</div>
                     <p lign="center">R<%=product.getPrice()%></p>
-                    <button name="add-item" value="<%=i%>" class="add-item" id="<%=i%>" onclick="addItemOnCart(this.id)">
-                            Add To Cart 
-			<i class="fa fa-shopping-basket" aria-hidden="true"></i>
-                        </button>
-                        <br><a href="product.jsp">veiw product</a>
+                    <form action="GetProductServelt.do" method="POST">
+                        <input type="submit" name="btn-value" value="<%=i%>. More info" class="add-item" id="<%=i%>" >
+                    </form>
 		</div>
             <%}%>
             </div>
             <div class="checkout-box" id="checkout-box">
                 <ul>
-                <% for(int i =0; i < 10;i++){%>
-                <li>Nvidia rtx3090ti</li><span>(R40000.00)</span><br> 
+                <% for(int i =0; i < tobuy.size();i++){
+                
+                        Product toBpro = tobuy.get(i);
+                        String name="";
+                        if(toBpro instanceof Computer)
+                        {
+                            Computer comp = (Computer)toBpro;
+                            name = comp.getBrand()+" "+ comp.getProcessor()+" Desktop";
+                        }else
+                        {
+                            GraphicsCard gpu =(GraphicsCard)toBpro;
+                            name = gpu.getBrand()+" "+gpu.getModel();
+                        }
+                
+                %>
+                <li><%=name%></li><span><%=toBpro.getPrice()%></span><br> 
                     <hr>
                 
                 <%}%>
                 </ul>
-                <form method="POST">
+                <form action="checkout.jsp" method="POST">
                     <div class="proceed"> <input type="submit" value="Proceed to checkout"><i class="fa fa-shopping-basket" aria-hidden="true"><span>R 40000.00</span></i></div>
                 </form>
             </div>
@@ -170,32 +183,8 @@
 		
 		
 	}
-        
-       /* var buttons = document.getElementsByTagName("button");
-        var length = buttons.length;
-        for(var i=0; i< length; i += 1)
-        {
-            buttons[i].onclick = function(e)
-            {
-                alert(this.id);
-                
-                       
-            }
-            
-        }
-        */
-        
-        
-        
-	function addItemOnCart(id){
-                
-		document.getElementById("items").innerHTML = ""+id;
-                <%
-                    System.out.println(request.getParameter("add-item"));
-                    session.setAttribute("num", null);
-                %>
-	}
-	function showLogInForm(){
+
+        function showLogInForm(){
 		let login = document.getElementById("login");
 		
 		login.classList.toggle("login-visible");
