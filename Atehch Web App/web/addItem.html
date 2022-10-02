@@ -63,6 +63,40 @@ and open the template in the editor.
                     <input type="submit" id="submit">
                 </form>
             </div>
+            <div class="form-container gpu" id="gpu container">
+                <form action="AddGpuServlet.do" method="post">
+                    <table border="0">
+                        <tbody>
+                            <tr>
+                                <td>Brand:</td>
+                                <td><input type="text" name="name" placeholder="Asus" required=""></td>
+                            </tr>
+                            <tr>
+                                <td>Model:</td>
+                                <td><input type="text" name="model" placeholder="Nvidida rtx 3090 ti" required="" ></td>
+                            </tr>
+                            <tr>
+                                <td>VRam:</td>
+                                <td><input type="text" name="vram" placeholder="24GB" required=""></td>
+                            </tr>
+                            <tr>
+                                <td>Cores:</td>
+                                <td><input type="text" name="cores" placeholder="1024 cuda cores" required=""></td>
+                            </tr>
+                            <tr>
+                                <td>Version</td>
+                                <td><input type="text" name="type" placeholder="GDDR6" required=""></td>
+                            </tr>
+                            <tr>
+                                <td>Price:</td>
+                                <td><input type="number" name="price" placeholder="15000" required=""></td>
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+                    <input type="submit" id="submit">
+                </form>
+            </div>
             
             
         </div>
@@ -74,13 +108,13 @@ and open the template in the editor.
             function view(){
                 var category = document.getElementById("category").value;
                 let container = document.getElementById("container");
-               
+                let gpucont = document.getElementById("gpu container");
                     if(category === "computer")
                     {
                         container.classList.toggle("visible");
                     }else if(category === "GPU")
                     {
-                    
+                        gpucont.classList.toggle("visible");
                     
                     }
             }    

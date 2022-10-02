@@ -18,16 +18,12 @@ public class Computer extends Product implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @Column(name = "motherboard",nullable = false)
     private String motherboard; //e.g 
     
-    @Column(nullable = false)
     private String ram;//e.g. 16gb ram 2666mhz
     
-    @Column(nullable = true)
     private String gpu;//e.g Asus rtx 3090
     
-   @Column(nullable = false)
     private String processor;//e.g i5 12400f/6 cores 12 threads
           
     public Computer() {

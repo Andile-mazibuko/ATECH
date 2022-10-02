@@ -4,6 +4,7 @@
     Author     : andil
 --%>
 
+<%@page import="atech.entities.ac.za.GraphicsCard"%>
 <%@page import="java.util.List"%>
 <%@page import="atech.entities.ac.za.Customer"%>
 <%@page import="atech.entities.ac.za.Computer"%>
@@ -18,9 +19,21 @@
 </head>
 <body class="body" id="body">
     <%
-        Product selectedProd = (Computer)session.getAttribute("selectedProd");
+        Product selectedProd = (Product)session.getAttribute("selectedProd");
+        Computer selectedComp = null;
+        GraphicsCard selectedGpu = null;
+        
+        if(selectedProd instanceof Computer)
+        {
+            selectedComp = (Computer)selectedProd;
+        }else
+        {
+            selectedGpu = (GraphicsCard)selectedProd;
+        }
+        
+        
         Customer customer = (Customer)session.getAttribute("customer");
-    
+        String path = "";
     %>
     <div class="navigation-bar" id="nav-bar">
 	<a href="" >
@@ -41,23 +54,33 @@
 	</div>
         <div class="product-specifications">
             <h3><%
-                    if(selectedProd instanceof Computer)
+                    String name,type,ram,category,gpu;
+                    if(selectedComp != null )
                     {
-                       Computer selectedComp = (Computer)selectedProd;
-                    
-                    %><%=selectedComp.getBrand() +" "+ selectedComp.getProcessor()+" " %>
-                <%}%>
+                        name = selectedComp.getBrand()+" "+selectedComp.getProcessor()+" Desktop";
+                        type = selectedComp.getMotherboard();
+                        ram = selectedComp.getRam();
+                        gpu = selectedComp.getGpu();
+                        category = "Desktop";
+                    }else
+                    {
+                        name = selectedGpu.getBrand()+" "+selectedGpu.getModel();
+                        type = selectedGpu.getType();
+                        ram = selectedGpu.getVram();
+                        gpu = selectedGpu.getCores();
+                        category = "GPU";
+                    }    
+                %>
             
             </h3>
                     
                     <p>
-                	Asus RTX 3090 ti<br>
-			GDDR6<br>
-			VRAM 24gb<br>
-			Graphics card category<br>
-			10752 Cuda cores<br>
-			Triple Fan<br>
-			3x DisplayPort
+                	<%=name%><br>
+			<%=type%><br>
+			<%=ram%><br>
+			<%=gpu%><br>
+			Category:<%= category%><br>
+			
                     </p>
                     <button class="add-to-wishlist" onclick="changeHeart(),setConfirmVisible()">
                         <i class="fa fa-heart" aria-hidden="true" id="heart"></i>
@@ -66,7 +89,7 @@
 			Add To Cart 
 			<i class="fa fa-shopping-basket" aria-hidden="true" ></i>
                     </button>
-                    <a href="GetProductServelt.do">hi</a>
+                    <a href="<%=path%>">hi</a>
         </div>
         
     </div>
@@ -82,25 +105,30 @@
            <% 
                 // testing for now
                 List<Product>wishList = customer.getWishList();
-               for(int i = 0; i < wishList.size(); i++)
-               {
-                   if(wishList.get(i).getId() != selectedProd.getId())
+               
+                   if(wishList.size() == 0)
                    {
                        wishList.add(selectedProd);
+                       path = "GetProductServelt.do";
                        session.setAttribute("exist", "no");
                        
-                   }else
+                   }else 
                    {
-                      session.setAttribute("exist", "yes");
-                   }
-               
-               }
-                
-                
-                    
-                        
-                    
-                
+                        for(int i = 0; i < wishList.size(); i++)
+                        {
+                            if(wishList.get(i).getId() != selectedProd.getId())
+                            {
+                               wishList.add(selectedProd);
+                               path = "GetProductServelt.do";
+                               break;
+                            }else if(wishList.get(i).getId() == selectedProd.getId())
+                            {
+                              path = "dashboard.jsp";
+                              System.out.println("Sometinh");
+                            }
+                        }   
+                    }
+               customer.setWishList(wishList);
                 session.setAttribute("customer", customer);
 
            %>

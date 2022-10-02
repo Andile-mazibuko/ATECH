@@ -34,10 +34,8 @@ public class GetProductServelt extends HttpServlet {
         Customer customer = (Customer)session.getAttribute("customer");
        // List<Product>wish =customer.getWishList();
                
-       if(session.getAttribute("exist").toString().equals("no"))
-       {
            customerFacade.edit(customer);
-       }
+
        
        
        request.getRequestDispatcher("dashboard.jsp").forward(request, response);

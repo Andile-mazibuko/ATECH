@@ -20,6 +20,10 @@
         <servlet-name>GetProductServelt</servlet-name>
         <servlet-class>atech.servlets.ac.za.GetProductServelt</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddGpuServlet</servlet-name>
+        <servlet-class>atech.servlets.ac.za.AddGpuServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CreateAccountServlet</servlet-name>
         <url-pattern>/CreateAccountServlet.do</url-pattern>
@@ -39,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>GetProductServelt</servlet-name>
         <url-pattern>/GetProductServelt.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddGpuServlet</servlet-name>
+        <url-pattern>/AddGpuServlet.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
