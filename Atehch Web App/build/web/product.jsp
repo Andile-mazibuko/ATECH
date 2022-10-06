@@ -22,6 +22,7 @@
         Product selectedProd = (Product)session.getAttribute("selectedProd");
         Computer selectedComp = null;
         GraphicsCard selectedGpu = null;
+        List<Product>tobuy = (List<Product>)session.getAttribute("tobuy");
         
         if(selectedProd instanceof Computer)
         {
@@ -85,11 +86,19 @@
                     <button class="add-to-wishlist" onclick="changeHeart(),setConfirmVisible()">
                         <i class="fa fa-heart" aria-hidden="true" id="heart"></i>
                     </button>
-                    <button class="add-item" onclick="addItemOnCart()">
-			Add To Cart 
-			<i class="fa fa-shopping-basket" aria-hidden="true" ></i>
-                    </button>
-                    <a href="<%=path%>">hi</a>
+                   <a href="dashboard.jsp">
+                        <button class="add-item" onclick="addItemOnCart()">
+                            Add To Cart 
+                            <i class="fa fa-shopping-basket" aria-hidden="true" ></i>
+                        </button>
+                    </a>
+                    <div class="confirm">
+			<p> Proceed to the next page?</p><br/>
+                        <form action="">
+                            <input type="button" value="no" id="no-btn">
+                            <input type="submit" value="Yes" >
+                        </form>
+                    </div>
         </div>
         
     </div>
@@ -124,14 +133,21 @@
                             }else if(wishList.get(i).getId() == selectedProd.getId())
                             {
                               path = "dashboard.jsp";
-                              System.out.println("Sometinh");
+                             // System.out.println("Sometinh");
                             }
                         }   
                     }
                customer.setWishList(wishList);
-                session.setAttribute("customer", customer);
+               session.setAttribute("customer", customer);
 
            %>
+        }
+        function addItemOnCart()
+        {
+            <%
+                tobuy.add(selectedProd);
+                
+            %>
         }
     </script>
 </body>

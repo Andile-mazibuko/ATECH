@@ -165,3 +165,25 @@
 	border-radius:10px;
 	cursor:pointer;
 }
+.confirm{
+    background-color: aliceblue;
+    height: 40%;
+    width: 40%;
+    position: relative;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin: 20px;
+    left:auto;
+}
+.confirm p{
+    display: flex;
+    top:10%;
+    position: absolute;
+    color: black;
+    left: auto;
+}
+form input{
+    height: 30px;
+    width: 100px;
+}

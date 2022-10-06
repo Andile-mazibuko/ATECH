@@ -1,15 +1,3 @@
-<%-- 
-    Document   : product
-    Created on : 22 Aug 2022, 11:45:32 AM
-    Author     : andil
---%>
-
-<%@page import="atech.entities.ac.za.GraphicsCard"%>
-<%@page import="java.util.List"%>
-<%@page import="atech.entities.ac.za.Customer"%>
-<%@page import="atech.entities.ac.za.Computer"%>
-<%@page import="atech.entities.ac.za.Product"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,24 +6,7 @@
 
 </head>
 <body class="body" id="body">
-    <%
-        Product selectedProd = (Product)session.getAttribute("selectedProd");
-        Computer selectedComp = null;
-        GraphicsCard selectedGpu = null;
-        List<Product>tobuy = (List<Product>)session.getAttribute("tobuy");
-        
-        if(selectedProd instanceof Computer)
-        {
-            selectedComp = (Computer)selectedProd;
-        }else
-        {
-            selectedGpu = (GraphicsCard)selectedProd;
-        }
-        
-        
-        Customer customer = (Customer)session.getAttribute("customer");
-        String path = "";
-    %>
+
     <div class="navigation-bar" id="nav-bar">
 	<a href="" >
         	<div class="logo-container">
@@ -54,48 +25,32 @@
 		<img src="img/logo.png" class = "product-image">
 	</div>
         <div class="product-specifications">
-            <h3><%
-                    String name,type,ram,category,gpu;
-                    if(selectedComp != null )
-                    {
-                        name = selectedComp.getBrand()+" "+selectedComp.getProcessor()+" Desktop";
-                        type = selectedComp.getMotherboard();
-                        ram = selectedComp.getRam();
-                        gpu = selectedComp.getGpu();
-                        category = "Desktop";
-                    }else
-                    {
-                        name = selectedGpu.getBrand()+" "+selectedGpu.getModel();
-                        type = selectedGpu.getType();
-                        ram = selectedGpu.getVram();
-                        gpu = selectedGpu.getCores();
-                        category = "GPU";
-                    }    
-                %>
-            
+            <h3>
+				Gtx 1060 ti
             </h3>
                     
                     <p>
-                	<%=name%><br>
-			<%=type%><br>
-			<%=ram%><br>
-			<%=gpu%><br>
-			Category:<%= category%><br>
+                	Hi<br>
+			checked<br>
+			ram<br>
+			laptop<br>
+			Category:<br>
 			
                     </p>
                     <button class="add-to-wishlist" onclick="changeHeart(),setConfirmVisible()">
                         <i class="fa fa-heart" aria-hidden="true" id="heart"></i>
                     </button>
-                   <a href="dashboard.jsp">
-                        <button class="add-item" onclick="addItemOnCart()">
-                            Add To Cart 
-                            <i class="fa fa-shopping-basket" aria-hidden="true" ></i>
-                        </button>
-                    </a>
+                    <button class="add-item" onclick="addItemOnCart()">
+			Add To Cart 
+			<i class="fa fa-shopping-basket" aria-hidden="true" ></i>
+                    </button>
+                    
+                    
                     <div class="confirm">
-			<p> Proceed to the next page?</p><br/>
+						<p> Proceed to the next page?</p><br/>
+                        
                         <form action="">
-                            <input type="button" value="no" id="no-btn">
+							<input type="button" value="no" id="no-btn">
                             <input type="submit" value="Yes" >
                         </form>
                     </div>
