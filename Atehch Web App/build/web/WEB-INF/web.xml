@@ -24,6 +24,10 @@
         <servlet-name>AddGpuServlet</servlet-name>
         <servlet-class>atech.servlets.ac.za.AddGpuServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>WishListServlet</servlet-name>
+        <servlet-class>atech.servlets.ac.za.WishListServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CreateAccountServlet</servlet-name>
         <url-pattern>/CreateAccountServlet.do</url-pattern>
@@ -47,6 +51,10 @@
     <servlet-mapping>
         <servlet-name>AddGpuServlet</servlet-name>
         <url-pattern>/AddGpuServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>WishListServlet</servlet-name>
+        <url-pattern>/WishListServlet.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

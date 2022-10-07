@@ -175,6 +175,7 @@
     justify-content: center;
     margin: 20px;
     left:auto;
+    visibility: hidden;
 }
 .confirm p{
     display: flex;
@@ -183,7 +184,14 @@
     color: black;
     left: auto;
 }
-form input{
+input{
     height: 30px;
     width: 100px;
 }
+
+.confirm-visible{
+    visibility: visible;
+}
+
+
+

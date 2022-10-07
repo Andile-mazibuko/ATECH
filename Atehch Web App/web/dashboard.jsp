@@ -61,7 +61,7 @@
                             </span>	
 			</div>
                     </a>
-                    <a href="">
+                    <a href="wishlist.jsp">
 			<div>								
                             <span >
 				<i class="fa fa-heart" aria-hidden="true"></i>

@@ -6,7 +6,6 @@
 package atech.servlets.ac.za;
 
 import atech.entities.ac.za.Customer;
-import atech.entities.ac.za.Product;
 import atech.sessions.ac.za.CustomerFacadeLocal;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -44,7 +43,10 @@ public class LogInServlet extends HttpServlet {
                 response.sendRedirect("DashBaordServlet.do");
                 
             }
-            else{System.out.println("null");}
+            else
+            {
+                request.getRequestDispatcher("index.html").forward(request, response);
+            }
          }else
          {
               request.getRequestDispatcher("index.html").forward(request, response);

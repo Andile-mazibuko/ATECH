@@ -1,0 +1,63 @@
+.nav-bar{
+    position: fixed;
+    height: 10%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    background-color: #43655A;
+    
+}
+.content{
+    position: fixed;
+    height: 90%;
+    width: 100%;
+    bottom: 0;
+    right: 0%;
+    background-color: #B1BDC5;
+    overflow:hidden;
+	overflow-y:scroll;
+}
+
+.product{
+    position: relative;
+    height: 15%;
+    width: 40%;
+    left: 30%;
+    background-color: #43655A;
+
+}
+.img-continer{
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    left: 0;
+}
+.img-continer img{
+    position: inherit;
+    width: 100%;
+    height: 100%;
+}
+.prod-content{
+    position: relative;
+    left: 20%;
+}
+.price{
+    position: relative;
+    
+}
+.next-btn{
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    height: 5%;
+    width: 150px;
+    background: transparent;
+}
+.next-btn button{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #43655A;
+    cursor: pointer;
+    border-radius: 20px;
+}

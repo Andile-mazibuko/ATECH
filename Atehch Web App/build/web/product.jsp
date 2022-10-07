@@ -94,10 +94,9 @@
                     </a>
                     <div class="confirm">
 			<p> Proceed to the next page?</p><br/>
-                        <form action="">
                             <input type="button" value="no" id="no-btn">
-                            <input type="submit" value="Yes" >
-                        </form>
+                            <a href="WishListServlet.do"><input type="submit" value="Yes" ></a>
+                       
                     </div>
         </div>
         
@@ -118,7 +117,7 @@
                    if(wishList.size() == 0)
                    {
                        wishList.add(selectedProd);
-                       path = "GetProductServelt.do";
+                       path = "WishListServlet.do";
                        session.setAttribute("exist", "no");
                        
                    }else 
