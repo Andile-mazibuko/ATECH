@@ -5,12 +5,9 @@
  */
 package atech.servlets.ac.za;
 
-import atech.entities.ac.za.Customer;
 import atech.entities.ac.za.Product;
-import atech.sessions.ac.za.CustomerFacadeLocal;
 import java.io.IOException;
 import java.util.List;
-import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
