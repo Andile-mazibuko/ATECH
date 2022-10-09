@@ -37,7 +37,7 @@
 			Category:<br>
 			
                     </p>
-                    <button class="add-to-wishlist" onclick="changeHeart(),setConfirmVisible()">
+                    <button class="add-to-wishlist" onclick="changeHeart(),confirmDecision()">
                         <i class="fa fa-heart" aria-hidden="true" id="heart"></i>
                     </button>
                     <button class="add-item" onclick="addItemOnCart()">
@@ -46,15 +46,13 @@
                     </button>
                     
                     
-                    <div class="confirm">
-						<p> Proceed to the next page?</p><br/>
-                        
-                        <form action="">
-							<input type="button" value="no" id="no-btn">
-                            <input type="submit" value="Yes" >
-                        </form>
+                    <div class="confirm" id="conf-dec">
+                        <p> Proceed to the next page?</p><br/>
+                                    <input type="button" value="no" id="no-btn" onclick="confirmDecision()">
+                                    <a href="WishListServlet.do"><input type="submit" value="Yes" ></a>
+                                   
                     </div>
-        </div>
+        </div>        
         
     </div>
 		
@@ -64,45 +62,11 @@
             let heart = document.getElementById("heart");
             heart.classList.toggle("red-heart");
         }
-        function setConfirmVisible()
+        
+        function confirmDecision()
         {
-           <% 
-                // testing for now
-                List<Product>wishList = customer.getWishList();
-               
-                   if(wishList.size() == 0)
-                   {
-                       wishList.add(selectedProd);
-                       path = "GetProductServelt.do";
-                       session.setAttribute("exist", "no");
-                       
-                   }else 
-                   {
-                        for(int i = 0; i < wishList.size(); i++)
-                        {
-                            if(wishList.get(i).getId() != selectedProd.getId())
-                            {
-                               wishList.add(selectedProd);
-                               path = "GetProductServelt.do";
-                               break;
-                            }else if(wishList.get(i).getId() == selectedProd.getId())
-                            {
-                              path = "dashboard.jsp";
-                             // System.out.println("Sometinh");
-                            }
-                        }   
-                    }
-               customer.setWishList(wishList);
-               session.setAttribute("customer", customer);
-
-           %>
-        }
-        function addItemOnCart()
-        {
-            <%
-                tobuy.add(selectedProd);
-                
-            %>
+            let conf = document.getElementById("conf-dec");
+            conf.classList.toggle("confirm-visible");
         }
     </script>
 </body>

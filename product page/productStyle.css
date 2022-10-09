@@ -26,7 +26,7 @@
 	left:10px;
 }
 .logo-container img{
-
+	
 	height:100%;
 	width:100%;
 	border-radius:12px;
@@ -37,7 +37,7 @@
 	float:left;
 	padding:15px;
 	color: #DADDE2;
-
+	
 }
 .navigation-list{
 	float:right;
@@ -45,7 +45,7 @@
 .navigation-bar li a{
 	text-decoration:none;
 	color: #DADDE2;
-
+	
 }
 .search-area{
 	background-color:#889FA5;
@@ -72,10 +72,10 @@
 	background-color:#889FA5;
 	color:white;
 	padding:10px;
-
+	
 }
 .search-field i{
-
+	
 	top:50%;
 	left:10%;
 }
@@ -83,7 +83,7 @@
 
 
 .products-area{
-	position:fixed;
+	position:fixed; 
 	height:90%;
 	width:100%;
 	right:0;
@@ -93,7 +93,7 @@
 	overflow-y:scroll;
 	background-color:#B1BDC5;
 	transition:1s;
-
+	
 }
 
 
@@ -101,8 +101,8 @@
 
 
 .fa fa-shopping-basket span {
-
-
+	
+	
 }
 .products-area a{
 	text-decoration:none;
@@ -134,7 +134,7 @@
 .product-specifications h3{
 	text-align:center;
 	font-size:30px;
-
+	
 }
 .product-specifications p{
 	font-size:20px;
@@ -166,16 +166,28 @@
 	cursor:pointer;
 }
 .confirm{
-    background-color: black;
+    background-color: aliceblue;
     height: 40%;
     width: 40%;
-    position: absolute;
+    position: fixed;
+    left:auto;
+    visibility: hidden;
+}
+.confirm p{
     display: flex;
-    align-items: center;
+    top:10%;
+    position: absolute;
+    color: black;
+    left: auto;
+}
+input{
+    height: 30px;
+    width: 100px;
+}
 
+.confirm-visible{
+    visibility: visible;
 }
-.confirm #no-btn{
-    width: 200px;
-    height: 50px;
-    position: inherit;
-}
+
+
+

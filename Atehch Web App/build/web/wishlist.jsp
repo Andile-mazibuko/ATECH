@@ -4,6 +4,10 @@
     Author     : andil
 --%>
 
+<%@page import="atech.entities.ac.za.GraphicsCard"%>
+<%@page import="atech.entities.ac.za.Product"%>
+<%@page import="atech.entities.ac.za.Computer"%>
+<%@page import="atech.entities.ac.za.Customer"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -24,7 +28,22 @@
         
     </div>
     <div class="content">
+        <% Customer customer = (Customer)session.getAttribute("customer");%>
+        <%for(int i = 0; i < customer.getWishList().size(); i++){
         
+        String name = "";
+        Product product = customer.getWishList().get(i);
+        if(product instanceof Computer){
+            Computer comp = (Computer)product;
+            name = comp.getBrand()+" "+comp.getProcessor()+" Desktop";
+        }else
+        {
+            GraphicsCard gpu = (GraphicsCard)product;
+            name = gpu.getBrand()+" "+gpu.getType()+" "+gpu.getModel();
+        }
+        %>
+        
+       
         <div class="product">
         
             <div class="img-continer">
@@ -32,9 +51,9 @@
             </div>
         
             <div class="prod-content">
-                <h3>Palit GTX 1660 SUPER</h3>
+                <h3><%=name%></h3>
                 
-                <div class="price">R19990</div>
+                <div class="price">R <%=product.getPrice()%></div>
             </div>
             <div class="cart-btn">
                 <button>
@@ -43,8 +62,8 @@
             </div>
         
         </div>
-       
-        <div class="next-btn"><button>Back</button></div>
+       <%}%>
+        <a href="dashboard.jsp"><div class="next-btn"><button>Back</button></div></a>
     </div> 
     </body>
 </html>

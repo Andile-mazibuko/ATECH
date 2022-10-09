@@ -83,21 +83,18 @@
 			Category:<%= category%><br>
 			
                     </p>
-                    <button class="add-to-wishlist" onclick="changeHeart(),setConfirmVisible()">
-                        <i class="fa fa-heart" aria-hidden="true" id="heart"></i>
-                    </button>
+                    <a href="WishListServlet.do">
+                        <button class="add-to-wishlist" onclick="changeHeart(),setConfirmVisible()">
+                            <i class="fa fa-heart" aria-hidden="true" id="heart"></i>
+                        </button>
+                    </a>
                    <a href="dashboard.jsp">
                         <button class="add-item" onclick="addItemOnCart()">
                             Add To Cart 
                             <i class="fa fa-shopping-basket" aria-hidden="true" ></i>
                         </button>
                     </a>
-                    <div class="confirm">
-			<p> Proceed to the next page?</p><br/>
-                            <input type="button" value="no" id="no-btn">
-                            <a href="WishListServlet.do"><input type="submit" value="Yes" ></a>
-                       
-                    </div>
+                   
         </div>
         
     </div>
@@ -147,6 +144,11 @@
                 tobuy.add(selectedProd);
                 
             %>
+        }
+        function confirmDecision()
+        {
+            let conf = document.getElementById("conf-dec");
+            conf.classList.toggle("confirm-visible");
         }
     </script>
 </body>
