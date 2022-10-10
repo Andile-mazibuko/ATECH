@@ -32,7 +32,7 @@
             <ul class="navigation-list">
                 <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a></li>
                 <li><button class="basket-btn" onclick="proceedToCheckout()"><i class="fa fa-shopping-basket" aria-hidden="true"><span id="items" ><%=tobuy.size()%> </span></i></button></li>
-		<li><a href=""><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
+		<li><a href="account.jsp"><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
 		<li><a href=""><i class="fa fa-phone" aria-hidden="true"></i></a></li>
             				
             </ul>
@@ -69,7 +69,7 @@
                             </span>	
 			</div>
                     </a>
-                    <a href="">
+                    <a href="account.jsp">
 			<div>
                             <span >
 				<i class="fa fa-user-circle" aria-hidden="true"></i>

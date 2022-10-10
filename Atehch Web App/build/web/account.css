@@ -1,6 +1,7 @@
 body{
     display: flex;
     justify-content: center;
+    background: aliceblue;
 }
 
 
@@ -41,15 +42,32 @@ body{
 }
 .links a {
     width: 100%;
-
+    text-decoration: none;
+    color: #43655A;
+    
 }
 
 a div{
-    width: 100%;
+    position: relative;
+    width: 90%;
     background-color:  ;
     border-bottom: 1px solid;
     margin-top: 5px;
+    left: 5%;
+    transition: .5s;
+    
 }
+a:visited{
+    color: #43655A;
+}
+a div:hover{
+    position: relative;
+    left: 10%;
+    transition: .5s;
+    
+}
+
+
 .log-in-details{
     position: relative;
     width: 90%;

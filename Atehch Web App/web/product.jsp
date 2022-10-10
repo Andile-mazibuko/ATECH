@@ -68,7 +68,7 @@
                         name = selectedGpu.getBrand()+" "+selectedGpu.getModel();
                         type = selectedGpu.getType();
                         ram = selectedGpu.getVram();
-                        gpu = selectedGpu.getCores();
+                        gpu = selectedGpu.getCores()+" cores";
                         category = "GPU";
                     }    
                 %>
@@ -81,7 +81,7 @@
 			<%=ram%><br>
 			<%=gpu%><br>
 			Category:<%= category%><br>
-			
+                        R<%=selectedProd.getPrice()%>
                     </p>
                     <a href="WishListServlet.do">
                         <button class="add-to-wishlist" onclick="changeHeart(),setConfirmVisible()">
