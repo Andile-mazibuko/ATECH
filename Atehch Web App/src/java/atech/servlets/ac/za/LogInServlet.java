@@ -45,11 +45,11 @@ public class LogInServlet extends HttpServlet {
             }
             else
             {
-                request.getRequestDispatcher("index.html").forward(request, response);
+                request.getRequestDispatcher("LogInPage.jsp").forward(request, response);
             }
          }else
          {
-              request.getRequestDispatcher("index.html").forward(request, response);
+              request.getRequestDispatcher("LogInPage.jsp").forward(request, response);
          }
          
          

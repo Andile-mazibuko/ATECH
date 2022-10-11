@@ -179,7 +179,9 @@
                 navbar.classList.toggle("dark-navbar");
 		product.classList.toggle("dark-product");
 		body.classList.toggle("dark-mode");
-		
+		<%
+                    session.setAttribute("dark_mode","enabled");
+                %>
 		
 		
 	}

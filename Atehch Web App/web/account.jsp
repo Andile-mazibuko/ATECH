@@ -19,7 +19,7 @@
     <div class="nav-bar">
 
     </div>
-    <div class="container">
+    <div class="container" id="container">
         <%
             Customer customer = (Customer)session.getAttribute("customer");
             String hiddenPass = "";
@@ -75,5 +75,12 @@
             </table>
         </div>
     </div>
+                <script type="text/javascript">
+                    let
+                    <%
+                        if(session.getAttribute("dark_mode").toString().equals("enabled")){
+                    %>
+                </script>        
+        
 </body>
 </html>
