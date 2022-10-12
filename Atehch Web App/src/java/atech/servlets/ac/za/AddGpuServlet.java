@@ -9,7 +9,6 @@ import atech.entities.ac.za.Customer;
 import atech.entities.ac.za.GraphicsCard;
 import atech.sessions.ac.za.ProductFacadeLocal;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

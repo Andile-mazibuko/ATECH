@@ -9,6 +9,9 @@
     background-color: #43655A;
     
 }
+.dark_nav{
+    background-color: #383F50;
+}
 .logo-container{
     position: absolute;
     height: 100%;
@@ -29,8 +32,13 @@
     right: 0%;
     background-color: #B1BDC5;
     overflow:hidden;
-	overflow-y:scroll;
+    overflow-y:scroll;
 }
+.dark_content{
+    background-color: rgba(21, 30, 47,1);
+}
+
+
 
 .product{
     position: relative;

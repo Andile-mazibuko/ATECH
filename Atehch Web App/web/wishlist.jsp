@@ -21,13 +21,13 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="nav-bar">
+    <div class="nav-bar" id="nav-bar">
         <div class="logo-container">
             <img src="img/logo.png" alt="">
         </div>
         
     </div>
-    <div class="content">
+    <div class="content" id="content">
         <% Customer customer = (Customer)session.getAttribute("customer");%>
         <%for(int i = 0; i < customer.getWishList().size(); i++){
         
@@ -65,5 +65,17 @@
        <%}%>
         <a href="dashboard.jsp"><div class="next-btn"><button>Back</button></div></a>
     </div> 
+        <script type="text/javascript">
+            let nav = document.getElementById("nav-bar");
+            let content = document.getElementById("content");
+            <%
+                if(session.getAttribute("theme").toString().equals("dark"))
+                {
+            %>
+                nav.classList.toggle("dark_nav");
+                content.classList.toggle("dark_content");
+            <%}%>
+        </script>
+        
     </body>
 </html>

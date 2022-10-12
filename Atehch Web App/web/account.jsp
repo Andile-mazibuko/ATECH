@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="account.css">
     <title>Document</title>
 </head>
-<body>
+<body id="body">
     
-    <div class="nav-bar">
+    <div class="nav-bar" id="nav-bar">
 
     </div>
     <div class="container" id="container">
@@ -76,10 +76,14 @@
         </div>
     </div>
                 <script type="text/javascript">
-                    let
+                    let body = document.getElementById("body");
+                    let nav = document.getElementById("nav-bar");
                     <%
-                        if(session.getAttribute("dark_mode").toString().equals("enabled")){
+                        if(session.getAttribute("theme").toString().equals("dark")){
                     %>
+                            body.classList.toggle("dark_body");
+                            nav.classList.toggle("dark_nav");
+                    <%}%>
                 </script>        
         
 </body>

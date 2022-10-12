@@ -78,11 +78,13 @@
 			</div>
                     </a>
 		</div>
-			<button class="dark-mode-container" onclick="enableDarkMode()">
+                <a href="ChangeMode.do">
+			<button class="dark-mode-container">
         			<div class="icon-container">
                 			<img src="img/moon.png" >
 				</div>
 			</button>
+                </a>
             </div>
             <div class="products-area" id="product-area">
                 
@@ -146,8 +148,26 @@
 		
             <script type="text/javascript">
                 
-                
-	function closeSideBar()
+                let productArea = document.getElementById("product-area");
+		let product = document.getElementById("product");
+		let body = document.getElementById("body");
+		let sidebar = document.getElementById("side-bar");
+		let navbar = document.getElementById("nav-bar"); 
+	
+                <%
+                    if(session.getAttribute("theme").equals("dark"))
+                    {
+                %>
+    
+    
+                sidebar.classList.toggle("dark-mode-sidebar");
+                productArea.classList.toggle("product-dark");
+                navbar.classList.toggle("dark-navbar");
+		product.classList.toggle("dark-product");
+		body.classList.toggle("dark-mode");
+		<%}%>
+    
+    function closeSideBar()
 	{
 		let sidebar = document.getElementById("side-bar");
 		let arrbtn = document.getElementById("arrow-btn");
@@ -167,24 +187,9 @@
 		account.classList.toggle("invisible-sidecontent");
 		
             }
-	function enableDarkMode()
-	{
-		let productArea = document.getElementById("product-area");
-		let product = document.getElementById("product");
-		let body = document.getElementById("body");
-		let sidebar = document.getElementById("side-bar");
-		let navbar = document.getElementById("nav-bar"); 
-		sidebar.classList.toggle("dark-mode-sidebar");
-                productArea.classList.toggle("product-dark");
-                navbar.classList.toggle("dark-navbar");
-		product.classList.toggle("dark-product");
-		body.classList.toggle("dark-mode");
-		<%
-                    session.setAttribute("dark_mode","enabled");
-                %>
+            
 		
-		
-	}
+	
 
         function showLogInForm(){
 		let login = document.getElementById("login");

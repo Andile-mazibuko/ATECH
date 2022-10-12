@@ -63,6 +63,7 @@ public class CreateAccountServlet extends HttpServlet {
     private void updateSession(HttpSession session,Customer customer)
     {
             session.setAttribute("customer",customer);
+            session.setAttribute("theme","light");
     }
     private void addCustomer(Customer customer)
     {

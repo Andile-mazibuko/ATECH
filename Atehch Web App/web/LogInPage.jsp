@@ -40,10 +40,18 @@
 				<a href="createAccount.html">Sign up</a>
 			</span>	
 		</div>
+            
 	</div>
-    <div class="error-msg">
+    <div class="error-msg" id="error-msg">
         incorrect password
     </div>
-	
+
+    <script type="text/javascript">
+        let error = document.getElementById("error-msg");
+        <%if(session.getAttribute("password").toString().equals("incorrect")){%>
+            error.classList.toggle("error-msg-visible");
+        
+        <%}%>
+    </script>
 </body>
 </html>

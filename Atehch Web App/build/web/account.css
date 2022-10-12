@@ -3,7 +3,9 @@ body{
     justify-content: center;
     background: aliceblue;
 }
-
+.dark_body{
+    background-color: rgba(21, 30, 47,1);
+}
 
 .nav-bar{
     position: fixed;
@@ -12,6 +14,9 @@ body{
     top:0;
     background-color:#43655A;
     
+}
+.dark_nav{
+    background-color: #383F50;
 }
 .container{
     position: absolute;

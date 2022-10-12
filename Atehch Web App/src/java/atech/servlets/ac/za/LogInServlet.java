@@ -45,6 +45,7 @@ public class LogInServlet extends HttpServlet {
             }
             else
             {
+                session.setAttribute("password", "correct");
                 request.getRequestDispatcher("LogInPage.jsp").forward(request, response);
             }
          }else
@@ -91,6 +92,7 @@ public class LogInServlet extends HttpServlet {
     {
         session.setAttribute("customer", customer);
         session.setAttribute("tobuy",new ArrayList<>());
+        session.setAttribute("theme", "light");
         
     }
 
