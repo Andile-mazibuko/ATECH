@@ -88,8 +88,8 @@
                             <i class="fa fa-heart" aria-hidden="true" id="heart"></i>
                         </button>
                     </a>
-                   <a href="dashboard.jsp">
-                        <button class="add-item" onclick="addItemOnCart()">
+                   <a href="AddOnCartServlet.do">
+                        <button class="add-item" >
                             Add To Cart 
                             <i class="fa fa-shopping-basket" aria-hidden="true" ></i>
                         </button>
@@ -138,13 +138,7 @@
 
            %>
         }
-        function addItemOnCart()
-        {
-            <%
-                tobuy.add(selectedProd);
-                
-            %>
-        }
+
         function confirmDecision()
         {
             let conf = document.getElementById("conf-dec");
