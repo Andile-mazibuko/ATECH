@@ -110,8 +110,16 @@
                     
                     <h3><%=name%></h3>
 		<div class="item-img-container">
-                    <img src="img/logo.png">
-		</div>
+                    
+                    <%
+                        if(product instanceof Computer){
+                    %>
+                        <img src="img/Computer.png">
+                    <%}else{%>
+                    <img src="img/Gpu.png">
+		<%}%>
+                
+                </div>
                     <p lign="center">R<%=product.getPrice()%></p>
                     <form action="GetProductServelt.do" method="POST">
                         <input type="submit" name="btn-value" value="<%=i%>. More info" class="add-item" id="<%=i%>" >
