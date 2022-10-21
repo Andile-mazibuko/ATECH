@@ -32,9 +32,15 @@ public class WishListServlet extends HttpServlet
         HttpSession session = request.getSession();
         Customer customer = (Customer)session.getAttribute("customer");
        // List<Product>wish =customer.getWishList();
-               
+         try{      
             customerFacade.edit(customer);
-            System.out.println(customer.getWishList().size());
+         }catch(Exception ex)
+         {
+             // for testing purposes
+            System.out.println("This item already exist on your wishlist "); 
+         }
+            
+            
             request.getRequestDispatcher("dashboard.jsp").forward(request, response);
      
         

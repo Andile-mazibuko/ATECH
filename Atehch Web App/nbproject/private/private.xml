@@ -3,35 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/web/account.css</file>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/src/java/atech/servlets/ac/za/AddGpuServlet.java</file>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/web/account.jsp</file>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/web/addItem.html</file>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/src/java/atech/servlets/ac/za/StartSessionServlet.java</file>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/web/dashboard.jsp</file>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/web/style.css</file>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/src/java/atech/servlets/ac/za/GetProductServelt.java</file>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/src/java/atech/servlets/ac/za/AddItemServlet.java</file>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/web/addItem.css</file>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/src/conf/persistence.xml</file>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/src/java/atech/servlets/ac/za/DashBaordServlet.java</file>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/web/index.html</file>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/web/LogInPage.jsp</file>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/web/productSytle.css</file>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/src/java/atech/servlets/ac/za/CreateAccountServlet.java</file>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/src/java/atech/servlets/ac/za/LogInServlet.java</file>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/web/WEB-INF/web.xml</file>
             <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/src/java/atech/servlets/ac/za/ChangeMode.java</file>
             <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/web/product.jsp</file>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/src/conf/MANIFEST.MF</file>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/web/wishlist.css</file>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/src/java/atech/entities/ac/za/Computer.java</file>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/web/script.js</file>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/src/java/atech/entities/ac/za/GraphicsCard.java</file>
+            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/src/java/atech/servlets/ac/za/GetProductServelt.java</file>
+            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/src/java/atech/servlets/ac/za/AddItemServlet.java</file>
+            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/src/java/atech/servlets/ac/za/CreateAccountServlet.java</file>
+            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/src/java/atech/servlets/ac/za/DashBaordServlet.java</file>
             <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/src/java/atech/servlets/ac/za/WishListServlet.java</file>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/web/wishlist.jsp</file>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/web/index.css</file>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/src/java/atech/entities/ac/za/Customer.java</file>
+            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/web/dashboard.jsp</file>
         </group>
     </open-files>
 </project-private>
