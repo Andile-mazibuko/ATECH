@@ -128,6 +128,7 @@
             <%}%>
             </div>
             <div class="checkout-box" id="checkout-box">
+                <div class="items">
                 <ul>
                 <% for(int i =0; i < tobuy.size();i++){
                 
@@ -149,9 +150,12 @@
                 
                 <%}%>
                 </ul>
-                <form action="checkout.jsp" method="POST">
-                    <div class="proceed"> <input type="submit" value="Proceed to checkout"><i class="fa fa-shopping-basket" aria-hidden="true"><span>R 40000.00</span></i></div>
-                </form>
+               </div>
+                <div class="sub-items">
+                    <a href="checkout.jsp">
+                         <button>Proceed to checkout  <i class="fa fa-shopping-basket" aria-hidden="true"></i>  (R999999.0)</button>
+                    </a>
+        	</div>
             </div>
 		
             <script type="text/javascript">

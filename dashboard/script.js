@@ -46,3 +46,9 @@
 		
 		login.classList.toggle("login-visible");
 	}
+	
+	function proceedToCheckout()
+	{
+		let basket = document.getElementById("checkout-box");
+		basket.classList.toggle("show-checkout");
+	}

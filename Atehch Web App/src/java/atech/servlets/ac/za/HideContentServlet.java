@@ -16,17 +16,25 @@ import javax.servlet.http.HttpSession;
  *
  * @author andil
  */
-public class StartSessionServlet extends HttpServlet {
+public class HideContentServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException 
+    throws ServletException, IOException
     {
-        HttpSession session = request.getSession(true);
-        session.setAttribute("password", "correct");
+        HttpSession session = request.getSession();
         
-        request.getRequestDispatcher("LogInPage.jsp").forward(request, response);
-    
+        String content = (String) session.getAttribute("content");
+        
+        if(content.equals("visible"))
+        {
+            session.setAttribute("content", "hidden");
+        }else
+        {
+            session.setAttribute("content", "visible");
+        }
+        
+        request.getRequestDispatcher("dashboard.jsp").forward(request, response);
     }
 
 }

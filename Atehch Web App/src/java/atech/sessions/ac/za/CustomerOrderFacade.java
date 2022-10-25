@@ -5,7 +5,7 @@
  */
 package atech.sessions.ac.za;
 
-import atech.entities.ac.za.GraphicsCard;
+import atech.entities.ac.za.CustomerOrder;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -15,7 +15,7 @@ import javax.persistence.PersistenceContext;
  * @author andil
  */
 @Stateless
-public class GraphicsCardFacade extends AbstractFacade<GraphicsCard> implements GraphicsCardFacadeLocal {
+public class CustomerOrderFacade extends AbstractFacade<CustomerOrder> implements CustomerOrderFacadeLocal {
 
     @PersistenceContext(unitName = "Atehch_Web_AppPU")
     private EntityManager em;
@@ -25,8 +25,8 @@ public class GraphicsCardFacade extends AbstractFacade<GraphicsCard> implements 
         return em;
     }
 
-    public GraphicsCardFacade() {
-        super(GraphicsCard.class);
+    public CustomerOrderFacade() {
+        super(CustomerOrder.class);
     }
     
 }

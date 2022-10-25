@@ -40,6 +40,10 @@
         <servlet-name>AddOnCartServlet</servlet-name>
         <servlet-class>atech.servlets.ac.za.AddOnCartServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>OrderProcessorServlet</servlet-name>
+        <servlet-class>atech.servlets.ac.za.OrderProcessorServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CreateAccountServlet</servlet-name>
         <url-pattern>/CreateAccountServlet.do</url-pattern>
@@ -79,6 +83,10 @@
     <servlet-mapping>
         <servlet-name>AddOnCartServlet</servlet-name>
         <url-pattern>/AddOnCartServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OrderProcessorServlet</servlet-name>
+        <url-pattern>/OrderProcessorServlet.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

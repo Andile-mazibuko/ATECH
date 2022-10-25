@@ -9,6 +9,7 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 
 /**
@@ -48,10 +49,24 @@ public class Customer implements Serializable {
     }
 
     @OneToMany()
+    @JoinTable(name = "CUSTOMER_WISHLIST")
     private List<Product> wishList;
+    
+    @OneToMany()
+    @JoinTable(name = "CUSTOMER_ORDERS")
+    private List<CustomerOrder>orders;
     
     
     public Customer(){}
+
+    public List<CustomerOrder> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<CustomerOrder> orders) {
+        this.orders = orders;
+    }
+    
 
     public String getFirstName() {
         return firstName;
