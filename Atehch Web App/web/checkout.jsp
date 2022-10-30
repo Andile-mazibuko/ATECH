@@ -4,6 +4,8 @@
     Author     : andil
 --%>
 
+<%@page import="java.util.List"%>
+<%@page import="atech.entities.ac.za.Product"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -23,6 +25,11 @@
         
     </div>
     <div class="content">
+        <%
+            List<Product>toBuy =(List<Product>)session.getAttribute("tobuy");
+        
+        for(int i = 0; i < toBuy.size(); i++){
+        %>
         
         <div class="product">
         
@@ -42,7 +49,7 @@
             </div>
         
         </div>
-        
+        <%}%>
         <div class="next-btn"><a href="OrderProcessorServlet.do"><button>Make payment</button></a></div>
     </div>
 </body>

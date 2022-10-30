@@ -40,13 +40,13 @@ public class OrderProcessorServlet extends HttpServlet {
         HttpSession session = request.getSession();
         List<Product>products = (List<Product>)session.getAttribute("tobuy");
         Customer customer = (Customer)session.getAttribute("customer");
-       
+        Double ordercost = (double)session.getAttribute("orderCost");
         
-        CustomerOrder customerOrder = createCustomerOrder(products, 0);
+        CustomerOrder customerOrder = createCustomerOrder(products, ordercost);
         customerOrderFacade.create(customerOrder); 
         List<CustomerOrder>orders = customer.getOrders();
         orders.add(customerOrder);
-        customer.setOrders(orders);
+        //customer.setOrders(orders);
         
         
         customerFacade.edit(customer);

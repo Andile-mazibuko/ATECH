@@ -84,7 +84,7 @@
                         R<%=selectedProd.getPrice()%>
                     </p>
                     <a href="WishListServlet.do">
-                        <button class="add-to-wishlist" onclick="changeHeart(),setConfirmVisible()">
+                        <button class="add-to-wishlist">
                             <i class="fa fa-heart" aria-hidden="true" id="heart"></i>
                         </button>
                     </a>
@@ -104,39 +104,6 @@
         {
             let heart = document.getElementById("heart");
             heart.classList.toggle("red-heart");
-        }
-        function setConfirmVisible()
-        {
-           <% 
-                // testing for now
-                List<Product>wishList = customer.getWishList();
-               
-                   if(wishList.size() == 0)
-                   {
-                       wishList.add(selectedProd);
-                       path = "WishListServlet.do";
-                       session.setAttribute("exist", "no");
-                       
-                   }else 
-                   {
-                        for(int i = 0; i < wishList.size(); i++)
-                        {
-                            if(wishList.get(i).getId() != selectedProd.getId())
-                            {
-                               wishList.add(selectedProd);
-                               path = "GetProductServelt.do";
-                               break;
-                            }else if(wishList.get(i).getId() == selectedProd.getId())
-                            {
-                              path = "dashboard.jsp";
-                             // System.out.println("Sometinh");
-                            }
-                        }   
-                    }
-               customer.setWishList(wishList);
-               session.setAttribute("customer", customer);
-
-           %>
         }
 
         function confirmDecision()

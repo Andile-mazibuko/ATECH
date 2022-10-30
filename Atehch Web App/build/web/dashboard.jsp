@@ -1,3 +1,4 @@
+<%@page import="atech.entities.ac.za.Customer"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="atech.entities.ac.za.GraphicsCard"%>
 <%@page import="atech.entities.ac.za.Computer"%>
@@ -30,9 +31,12 @@
             </a>
             <% List<Product> tobuy = (List<Product> )session.getAttribute("tobuy");%>
             <ul class="navigation-list">
+                <%Customer customer = (Customer)session.getAttribute("customer");%>
+                <li><a href="account.jsp">Hi(<%=customer.getFirstName()+" "+customer.getLastname() %>)</a></li>
                 <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a></li>
                 <li><button class="basket-btn" onclick="proceedToCheckout()"><i class="fa fa-shopping-basket" aria-hidden="true"><span id="items" ><%=tobuy.size()%> </span></i></button></li>
 		<li><a href="account.jsp"><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
+                
 		<li><a href=""><i class="fa fa-phone" aria-hidden="true"></i></a></li>
             				
             </ul>
@@ -130,7 +134,9 @@
             <div class="checkout-box" id="checkout-box">
                 <div class="items">
                 <ul>
-                <% for(int i =0; i < tobuy.size();i++){
+                <%
+                    Double total = 0.0;
+                    for(int i =0; i < tobuy.size();i++){
                 
                         Product toBpro = tobuy.get(i);
                         String name="";
@@ -147,13 +153,17 @@
                 %>
                 <li><%=name%></li><span><%=toBpro.getPrice()%></span><br> 
                     <hr>
-                
-                <%}%>
+               
+                <%
+                    total+=toBpro.getPrice();
+                    }
+                    session.setAttribute("orderCost", total);
+                %>
                 </ul>
                </div>
                 <div class="sub-items">
                     <a href="checkout.jsp">
-                         <button>Proceed to checkout  <i class="fa fa-shopping-basket" aria-hidden="true"></i>  (R999999.0)</button>
+                         <button>Proceed to checkout  <i class="fa fa-shopping-basket" aria-hidden="true"></i>  (<%=total%>.0)</button>
                     </a>
         	</div>
             </div>
