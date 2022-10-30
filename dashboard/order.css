@@ -1,0 +1,76 @@
+.nav{
+    position: fixed;
+    background-color: #43655A;
+    height: 10%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.prod-area{
+    height: 90%;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: aliceblue;
+    position: fixed;
+    overflow: hidden;
+    overflow-y: scroll;
+
+}
+
+.card{
+    position: relative;
+    height: 10%;
+    width: 30%;
+    left: 35%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #43655A;
+    margin: 10px 0px 0px 10px ;
+    transition: all 1s ease-in-out;
+
+}
+.card ol{
+    height: 0;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+.card:hover{
+    height: 150px;
+    transition: all 1s ease-in-out;
+}
+.card:hover ol{
+    height: 40%;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+.card:hover .prod-header{
+    background-color: transparent;
+    color: transparent;
+    transition: all 1s ease-in-out;
+}
+.prod-header{
+    position: absolute;
+    height: 90%;
+    width: 90%;
+    background-color: #74988C;
+    top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    transition: all 1s ease-in-out;
+}
+h6{
+    position: absolute;
+    left: 0; 
+    top: 0; 
+}
+h4{
+   position: absolute;
+   right: 0; 
+   top: 0;
+
+}

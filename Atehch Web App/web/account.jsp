@@ -39,7 +39,7 @@
                    <i class="fa fa-key" aria-hidden="true"></i> Change password
                 </div>
             </a>
-            <a href="">
+            <a href="oders.jsp">
                 <div>
                    <i class="fa fa-history" aria-hidden="true"></i> order history
                 </div>

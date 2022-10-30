@@ -48,6 +48,10 @@
         <servlet-name>AddToWishlistServlet</servlet-name>
         <servlet-class>atech.entities.ac.za.AddToWishlistServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>OrdersServlet</servlet-name>
+        <servlet-class>atech.servlets.ac.za.OrdersServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CreateAccountServlet</servlet-name>
         <url-pattern>/CreateAccountServlet.do</url-pattern>
@@ -95,6 +99,10 @@
     <servlet-mapping>
         <servlet-name>AddToWishlistServlet</servlet-name>
         <url-pattern>/AddToWishlistServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OrdersServlet</servlet-name>
+        <url-pattern>/OrdersServlet.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

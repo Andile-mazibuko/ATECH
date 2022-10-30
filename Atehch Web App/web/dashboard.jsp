@@ -49,7 +49,7 @@
 	</div>
             <div class="side-bar" id="side-bar">
                 <div class="side-bar-content">
-                    <a href="">
+                    <a href="oders.jsp">
 			<div >
                             <span>
                             	<i class="fa fa-address-book" aria-hidden="true"></i>

@@ -3,8 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/web/checkout.jsp</file>
+            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/web/product.jsp</file>
             <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/src/java/atech/servlets/ac/za/OrderProcessorServlet.java</file>
+            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/src/java/atech/servlets/ac/za/AddItemServlet.java</file>
+            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/src/java/atech/servlets/ac/za/AddOnCartServlet.java</file>
+            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/src/java/atech/servlets/ac/za/WishListServlet.java</file>
             <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/web/LogInPage.jsp</file>
+            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/web/wishlist.jsp</file>
+            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/web/dashboard.jsp</file>
+            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/src/java/atech/entities/ac/za/Customer.java</file>
+            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/web/oders.jsp</file>
         </group>
     </open-files>
 </project-private>
