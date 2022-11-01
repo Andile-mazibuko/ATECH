@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 body{
     display: flex;
     justify-content: center;
@@ -35,6 +36,7 @@ body{
     width: 60%;
     background-color: aliceblue;
     box-shadow: 0px 0px 5px 1px black;
+    font-family: 'Bebas Neue', cursive;
 }
 .links{
     position: inherit;
@@ -49,6 +51,7 @@ body{
     width: 100%;
     text-decoration: none;
     color: #43655A;
+    font-family: 'Bebas Neue', cursive;
     
 }
 
@@ -60,6 +63,7 @@ a div{
     margin-top: 5px;
     left: 5%;
     transition: .5s;
+    
     
 }
 a:visited{
@@ -80,4 +84,5 @@ a div:hover{
     background-color:  rgb(162, 199, 199);
     margin-top: 5%;
     text-align: center;
+    font-family: 'Bebas Neue', cursive;
 }
