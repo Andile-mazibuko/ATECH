@@ -53,27 +53,27 @@
             <table>
                 <tr>
                     <td>Customer Id</td>
-                    <td><%=customer.getId()%></td>
+                    <td>: <%=customer.getId()%></td>
                 </tr>
                 <tr>
                     <td>name</td>
-                    <td><%=customer.getFirstName()%></td>
+                    <td>: <%=customer.getFirstName()%></td>
 
                 </tr>
                 <tr>
                     <td>lastname</td>
-                    <td><%=customer.getLastname()%></td>
+                    <td>: <%=customer.getLastname()%></td>
                 </tr>
             </table>
             <div class="log-in-details"><i class="fa fa-unlock" aria-hidden="true"></i>  Log In Details</div>
             <table>
                 <tr>
                     <td>Email</td>
-                    <td><%=customer.getEmail()%></td>
+                    <td>: <%=customer.getEmail()%></td>
                 </tr>
                 <tr>
                     <td>password</td>
-                    <td><%=hiddenPass%></td>
+                    <td>: <%=hiddenPass%></td>
                 </tr>
             </table>
         </div>

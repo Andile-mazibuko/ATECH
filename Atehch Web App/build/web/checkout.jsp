@@ -50,7 +50,20 @@
         
         </div>
         <%}%>
-        <div class="next-btn"><a href="OrderProcessorServlet.do"><button>Make payment</button></a></div>
+        <div class="next-btn"><a href="OrderProcessorServlet.do"><button id="payment">Make payment</button></a></div>
     </div>
+        <script type="text/javascript">
+            let makepayment = document.getElementById("payment");
+            <%
+                if(toBuy.size() == 0)
+                {
+            %>
+                          
+                alert('Your cart is empty.Please go back to fill the cart');
+                makepayment.classList.toggle("unclickable-btn");
+            <%
+                }
+            %>
+        </script>
 </body>
 </html>

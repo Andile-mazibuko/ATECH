@@ -104,3 +104,7 @@ button{
     cursor: pointer;
     border-radius: 14px;
 }
+.unclickable-btn{
+    display: inline-block;
+    pointer-events: none;
+}
