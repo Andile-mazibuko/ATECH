@@ -23,13 +23,15 @@ public class ChangeMode extends HttpServlet {
     {
         HttpSession session = request.getSession();
         String theme = (String)session.getAttribute("theme");
-        
+        String side = (String)session.getAttribute("content");
         if(theme.equals("light"))
         {
             session.setAttribute("theme","dark");
+            session.setAttribute("content",side);
         }else
         {
             session.setAttribute("theme","light");
+            session.setAttribute("content",side);
         }
         
         request.getRequestDispatcher("dashboard.jsp").forward(request, response);

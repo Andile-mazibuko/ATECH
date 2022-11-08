@@ -25,7 +25,7 @@ public class HideContentServlet extends HttpServlet {
         HttpSession session = request.getSession();
         
         String content = (String) session.getAttribute("content");
-        
+        String theme = (String)session.getAttribute("theme");
         if(content.equals("visible"))
         {
             session.setAttribute("content", "hidden");
@@ -33,7 +33,7 @@ public class HideContentServlet extends HttpServlet {
         {
             session.setAttribute("content", "visible");
         }
-        
+        session.setAttribute("theme", theme);
         request.getRequestDispatcher("dashboard.jsp").forward(request, response);
     }
 
