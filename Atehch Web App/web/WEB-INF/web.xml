@@ -52,6 +52,10 @@
         <servlet-name>OrdersServlet</servlet-name>
         <servlet-class>atech.servlets.ac.za.OrdersServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>TrackOrderServlet</servlet-name>
+        <servlet-class>atech.servlets.ac.za.TrackOrderServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CreateAccountServlet</servlet-name>
         <url-pattern>/CreateAccountServlet.do</url-pattern>
@@ -103,6 +107,10 @@
     <servlet-mapping>
         <servlet-name>OrdersServlet</servlet-name>
         <url-pattern>/OrdersServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TrackOrderServlet</servlet-name>
+        <url-pattern>/TrackOrderServlet.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

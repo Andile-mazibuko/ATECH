@@ -85,6 +85,7 @@
     background-color: #43655A;
     cursor: pointer;
     border-radius: 20px;
+    opacity: 1;
 }
 .cart-btn{
     position: absolute;
@@ -107,4 +108,5 @@ button{
 .unclickable-btn{
     display: inline-block;
     pointer-events: none;
+    opacity: 0;
 }

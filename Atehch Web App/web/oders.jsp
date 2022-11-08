@@ -70,10 +70,10 @@
         <div class="track-order">
             <h4>Track order status</h4>
             
-                <form>
+            <form action="TrackOrderServlet.do" method="post">
                     <div>
                         <i class="fa fa-eye" aria-hidden="true"></i>
-                        <input type="number" name="ordernumber" placeholder="e.g 000">
+                        <input type="number" name="ordernumber" placeholder="e.g 000" required="">
                     </div>
                     <input type="submit" value="Track" class="sub-btn">
                 </form>

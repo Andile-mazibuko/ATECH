@@ -8,6 +8,7 @@ package atech.entities.ac.za;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -33,7 +34,34 @@ public class CustomerOrder implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date orderDate;
     
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date readyDate;
+    
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date collectionDate;
+
+    public Date getReadyDate() {
+        return readyDate;
+    }
+
+    public void setReadyDate(Date readyDate) {
+        this.readyDate = readyDate;
+    }
+
+    public Date getCollectionDate() {
+        return collectionDate;
+    }
+
+    public void setCollectionDate(Date collectionDate) {
+        this.collectionDate = collectionDate;
+    }
+    
+    
+    
     private Double orderCost;
+    
+    @Column(name ="ORDER_STATUS")
+    private String orderStatus;
     
     @OneToMany
     @JoinTable(name = "ORDER_PRODUCTS")
@@ -72,6 +100,14 @@ public class CustomerOrder implements Serializable {
 
     public void setProducts(List<Product> products) {
         this.products = products;
+    }
+
+    public String getOrderStatus() {
+        return orderStatus;
+    }
+
+    public void setOrderStatus(String orderStatus) {
+        this.orderStatus = orderStatus;
     }
 
 }

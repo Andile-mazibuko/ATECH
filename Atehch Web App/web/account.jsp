@@ -47,6 +47,11 @@
                    <i class="fa fa-history" aria-hidden="true"></i> order history
                 </div>
             </a>
+            <a href="dashboard.jsp">
+                <div>
+                    <button>< BACK</button>
+                </div>
+            </a>
         </div>
         <div class="account-details">
             <div class="log-in-details"><i class="fa fa-user" aria-hidden="true"></i>  User Profile</div>

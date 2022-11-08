@@ -86,3 +86,7 @@ a div:hover{
     text-align: center;
     font-family: 'Bebas Neue', cursive;
 }
+button{
+    background: wheat;
+    color: white;
+}
