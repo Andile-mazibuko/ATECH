@@ -47,7 +47,7 @@
             <a href=""><button><i class="fa fa-table" aria-hidden="true"></i> List Users</button></a>
         </div>
 	<div class="add-item">
-            <a href=""><button><i class="fa fa-cart-plus" aria-hidden="true"></i> Add item</button></a>
+            <a href="updateOrderstatus.jsp"><button><i class="fa fa-cart-plus" aria-hidden="true"></i> Update order</button></a>
         </div>
     </div>
     <div class="content-box">

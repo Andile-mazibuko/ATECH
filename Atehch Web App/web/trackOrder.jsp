@@ -16,20 +16,40 @@
     
     <%
         Integer num = 0;
+        String pcolor = "black";
+        String rcolor = "black";
+        String ccolor = "black";
+        
         CustomerOrder order = (CustomerOrder)session.getAttribute("trackedOrder");
         if(order.getOrderStatus() != null)
         {
             if(order.getOrderStatus().equalsIgnoreCase("ready"))
             {
                 num = 50;
+                rcolor = "rgb(0, 211, 112)";
             }else if(order.getOrderStatus().equalsIgnoreCase("collected"))
             {
                 num = 100;
+                ccolor = "rgb(0, 211, 112)";
             }else
             {
+                pcolor = "rgb(0, 211, 112)";
                 num = 0;
+                
             }
         }
+        String rDate = "Not specified";
+        String cDate = "Not specified";
+        
+        if(order.getReadyDate() != null)
+        {
+            rDate = order.getReadyDate().toString();
+        }
+        if(order.getCollectionDate() != null)
+        {
+            cDate = order.getCollectionDate().toString();
+        }
+
     %> 
     <style>
         .nav-bar{
@@ -93,19 +113,22 @@
             width: 47%;
             right: 0;
             top:0;
+            color: <%=pcolor%>;
+            
         }
         .ready{
             position: absolute;
             width: 47%;
             right: 0;
             top:49%;
+            color: <%=rcolor%>;
         }
         .collected{
             position: absolute;
             width: 47%;
-              
             right: 0;
             top:97%;
+            color: <%=ccolor%>;
         }
         .pay-date{
             position: absolute;
@@ -161,9 +184,9 @@
                     <div class="ready">Ready for collection</div>
                     <div class="collected">Order collected</div>
 
-                    <div class="pay-date"><%=order.getOrderDate().getDate() +" / "+order.getOrderDate().getMonth()+" / "+order.getOrderDate().getYear()%></div>
-                    <div class="re-date"><%=" / "+order.getOrderDate().getMonth()+" / "+order.getOrderDate().getYear()%></div>
-                    <div class="col-date"><%=order.getOrderDate().getDate() +" / "+order.getOrderDate().getMonth()+" / "+order.getOrderDate().getYear()%></div>
+                    <div class="pay-date"><%=order.getOrderDate().toString()%></div>
+                    <div class="re-date"><%=rDate%></div>
+                    <div class="col-date"><%=cDate%></div>
                 </div>
           </div>  
 
