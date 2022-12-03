@@ -4,6 +4,7 @@
     Author     : andil
 --%>
 
+<%@page import="atech.entities.ac.za.CustomerOrder"%>
 <%@page import="atech.entities.ac.za.Customer"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.util.List"%>
@@ -66,9 +67,9 @@
 	</div>
         
         <div class="content">
-            <h3>No Of users</h3>
+            <h3>No of Orders</h3>
             <div>
-                <span>143</span>
+                <span><%=((List<CustomerOrder>)session.getAttribute("orders")).size()%></span>
             </div>
 	</div>
 		

@@ -163,6 +163,23 @@
             color: grey;
 
         }
+        .back-btn{
+            bottom: 10%;
+            position: absolute;
+            right: 5%;
+            width: 10%;
+            height: 7%;
+          
+            
+        }
+        .back-btn button{
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            color: white;
+            background: wheat;
+            border-radius: 30px;
+        }
         @keyframes move{
             from  {height: 0}
             to {height: <%=num%>%}
@@ -189,7 +206,10 @@
                     <div class="col-date"><%=cDate%></div>
                 </div>
           </div>  
-
+                
+                <div class="back-btn">
+                    <a href="oders.jsp"><button><< Back</button></a>
+                </div>
     </div>
 
 

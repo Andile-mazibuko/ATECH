@@ -6,8 +6,10 @@
 package atech.servlets.ac.za;
 
 import atech.entities.ac.za.Customer;
+import atech.entities.ac.za.CustomerOrder;
 import atech.entities.ac.za.Product;
 import atech.sessions.ac.za.CustomerFacadeLocal;
+import atech.sessions.ac.za.CustomerOrderFacadeLocal;
 import atech.sessions.ac.za.ProductFacadeLocal;
 import java.io.IOException;
 import java.util.List;
@@ -23,6 +25,9 @@ import javax.servlet.http.HttpSession;
  * @author andil
  */
 public class DashBaordServlet extends HttpServlet {
+
+    @EJB
+    private CustomerOrderFacadeLocal customerOrderFacade;
 
     @EJB
     private CustomerFacadeLocal customerFacade;
@@ -66,9 +71,14 @@ public class DashBaordServlet extends HttpServlet {
     {
         session.setAttribute("customers", getAllUsers());
         session.setAttribute("products", getAllProducts());
+        session.setAttribute("orders",getAllOrders());
     }
     private List<Customer> getAllUsers()
     {
         return customerFacade.findAll();
+    }
+    private List<CustomerOrder> getAllOrders()
+    {
+        return customerOrderFacade.findAll();
     }
 }
