@@ -1,0 +1,64 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12 Dec 2022, 10:39:48 PM
+    Author     : andil
+*/
+
+.nav-bar{
+    position: fixed;
+    background-color: #43655A;
+    height: 10%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.body{
+    height: 90%;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: aliceblue;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 50%;
+    height: 80%;
+    border: 2px solid #43655A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container form{
+    position: relative;
+    width: 80%;
+    height: 70%;
+    float: right;
+}
+
+.container form input{
+    width: 50%;
+    height: 8%;
+    left: 25%;
+    top: 15%;
+    position: relative;
+    display: flex;
+    margin-top: 3%;
+    text-align: center;
+    border-radius: 20px;
+}
+#sub-btn{
+    background-color: #43655A;
+    width: 20%;
+    height: 10%;
+    left: 40%;
+    border-radius: 20px;
+    border: 0ch;
+}

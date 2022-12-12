@@ -60,6 +60,10 @@
         <servlet-name>UpdateOrderServlet</servlet-name>
         <servlet-class>atech.servlets.ac.za.UpdateOrderServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ChangePassword</servlet-name>
+        <servlet-class>atech.servlets.ac.za.ChangePassword</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CreateAccountServlet</servlet-name>
         <url-pattern>/CreateAccountServlet.do</url-pattern>
@@ -119,6 +123,10 @@
     <servlet-mapping>
         <servlet-name>UpdateOrderServlet</servlet-name>
         <url-pattern>/UpdateOrderServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ChangePassword</servlet-name>
+        <url-pattern>/ChangePassword.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
