@@ -32,7 +32,7 @@
 					<input type="password" name="password" placeholder="Enter password" id="password" required="">
 				</div>
 				
-                                <a href="" class="forgot-pass">fogort password</a><br><br>
+                                <a href="changePass.jsp" class="forgot-pass">fogort password</a><br><br>
 				<input type="submit" value="LOGIN" class="submit-btn" id="login-btn">
 			</form>
 		<br>
