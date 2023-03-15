@@ -16,7 +16,8 @@
 </head>
 <body class="body" id="body">
 	<div class="left">
-		<div class="text "><h1 align="center">ATECH</h1></div>
+            <div class="text "><img src="shopping-bags.svg" height="200px"><h1 align="center">ATECH</h1></div>
+                <div class="design-icon"><img src="shopping-bags.svg"></div>
 	</div>
 	<div class="right">
 		<div class="login-box" id="login">
@@ -32,7 +33,7 @@
 					<input type="password" name="password" placeholder="Enter password" id="password" required="">
 				</div>
 				
-                                <a href="" class="forgot-pass">fogort password</a><br><br>
+                                <a href="changePass.jsp" class="forgot-pass">fogort password</a><br><br>
 				<input type="submit" value="LOGIN" class="submit-btn" id="login-btn">
 			</form>
 		<br>

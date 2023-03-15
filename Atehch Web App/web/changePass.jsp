@@ -21,9 +21,9 @@
     </div>
     <div class="body">
         <div class="container">
-            <form action="">
+            <form action="ChangePassword.do">
                 <input type="text" name="email" placeholder="Please enter your email" required>
-                <input type="text" name="id" placeholder="Please enter your id" required>
+                <input type="text" name="id" placeholder="Please enter your id" minlength="13" maxlength="13" required >
                 <input type="password" name="newPass" id="" placeholder="Enter new password" minlength="6" required>
                 <input type="password" name="confirmNewPass" id="" placeholder="confirm password" required>
                 <input type="submit" value="change password" id="sub-btn">

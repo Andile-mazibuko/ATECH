@@ -3,9 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/E:/Files/projects/Git%20projects/Atech%20online%20shop/ATECH/Atehch%20Web%20App/nbproject/build-impl.xml</file>
             <file>file:/E:/Files/projects/Git%20projects/Atech%20online%20shop/ATECH/Atehch%20Web%20App/src/conf/persistence.xml</file>
             <file>file:/E:/Files/projects/Git%20projects/Atech%20online%20shop/ATECH/Atehch%20Web%20App/web/account.css</file>
+=======
+            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/src/java/atech/entities/ac/za/Product.java</file>
+>>>>>>> ca700508c9eb712dd074ef10a0f5a679e2dc7426
         </group>
     </open-files>
 </project-private>
