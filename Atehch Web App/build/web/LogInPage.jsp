@@ -16,8 +16,12 @@
 </head>
 <body class="body" id="body">
 	<div class="left">
-            <div class="text "><img src="shopping-bags.svg" height="200px"><h1 align="center">ATECH</h1></div>
-                <div class="design-icon"><img src="shopping-bags.svg"></div>
+            <div class="text "><h1 align="center">ATECH</h1>
+                <img src="img/water.svg" width="500px" class="ocean"/>
+			<img src="img/shopping-bags.svg" width="260px"/>
+			<p align="center">Best pc parts you can find</p>
+            </div>
+               
 	</div>
 	<div class="right">
 		<div class="login-box" id="login">
