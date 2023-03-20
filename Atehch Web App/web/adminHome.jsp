@@ -45,7 +45,7 @@
            <a href=""> <button><i class="fa fa-list-alt" aria-hidden="true"></i> List Items</button></a>
         </div>
 	<div class="add-item">
-            <a href=""><button><i class="fa fa-table" aria-hidden="true"></i> List Users</button></a>
+            <a href="adminListUsers.jsp"><button><i class="fa fa-table" aria-hidden="true"></i> List Users</button></a>
         </div>
 	<div class="add-item">
             <a href="updateOrderstatus.jsp"><button><i class="fa fa-cart-plus" aria-hidden="true"></i> Update order</button></a>
