@@ -44,7 +44,7 @@
                             <td><%=customers.get(i).getLastname()%></td>
                             <td><%=customers.get(i).getEmail()%></td>
                             <td><%=customers.get(i).getPassword()%></td>
-                            <td><button name="remove">Remove<span><%=customers.get(i).getId()%></span></button></td>
+                            <td><a href=""><button name="remove">Remove<span><%=customers.get(i).getId()%></span></button></a></td>
                         </tr>
                     <%}%>
                         
