@@ -17,6 +17,7 @@
     <body>
         <%
             List<Customer>customers = (List<Customer>)session.getAttribute("customers");
+            String loggedinUserEmail = ((Customer)session.getAttribute("customer")).getEmail();
             
          %>  
            
@@ -44,7 +45,13 @@
                             <td><%=customers.get(i).getLastname()%></td>
                             <td><%=customers.get(i).getEmail()%></td>
                             <td><%=customers.get(i).getPassword()%></td>
-                            <td><a href=""><button name="remove">Remove<span><%=customers.get(i).getId()%></span></button></a></td>
+                            <%if(!customers.get(i).getEmail().equals(loggedinUserEmail)){%>
+                            <td>
+                                <form action="RemoveCustomer.do" method="GET">
+                                    <button type="submit" name="remove" value="<%=customers.get(i).getId()%>">Remove </button>
+                                </form>
+                            </td>
+                            <%}%>
                         </tr>
                     <%}%>
                         

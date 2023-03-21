@@ -56,9 +56,6 @@ tr:nth-child(even)
     font-family: 'Mukta', sans-serif;
     background-color: rgb(172, 228, 228);
 }
-span{
-    visibility: hidden;
-}
 button{
     background-color:  #43655A;
     color: white;

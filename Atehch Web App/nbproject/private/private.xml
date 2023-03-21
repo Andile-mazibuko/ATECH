@@ -3,10 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/src/conf/persistence.xml</file>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/src/java/atech/entities/ac/za/CustomerOrder.java</file>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/web/LogInPage.jsp</file>
-            <file>file:/D:/Git-Projects/ATECH%20online%20shop/ATECH/Atehch%20Web%20App/web/index.css</file>
+            <file>file:/E:/Files/projects/Git%20projects/ATECH/Atehch%20Web%20App/src/java/atech/servlets/ac/za/ChangeMode.java</file>
+            <file>file:/E:/Files/projects/Git%20projects/ATECH/Atehch%20Web%20App/src/java/atech/servlets/ac/za/DashBaordServlet.java</file>
+            <file>file:/E:/Files/projects/Git%20projects/ATECH/Atehch%20Web%20App/src/java/atech/servlets/ac/za/AdminListUsersSrvlet.java</file>
+            <file>file:/E:/Files/projects/Git%20projects/ATECH/Atehch%20Web%20App/web/adminListUsers.jsp</file>
+            <file>file:/E:/Files/projects/Git%20projects/ATECH/Atehch%20Web%20App/src/java/atech/servlets/ac/za/AddItemServlet.java</file>
+            <file>file:/E:/Files/projects/Git%20projects/ATECH/Atehch%20Web%20App/web/adminListStyle.css</file>
+            <file>file:/E:/Files/projects/Git%20projects/ATECH/Atehch%20Web%20App/web/account.css</file>
+            <file>file:/E:/Files/projects/Git%20projects/ATECH/Atehch%20Web%20App/src/conf/persistence.xml</file>
+            <file>file:/E:/Files/projects/Git%20projects/ATECH/Atehch%20Web%20App/src/java/atech/servlets/ac/za/AddOnCartServlet.java</file>
+            <file>file:/E:/Files/projects/Git%20projects/ATECH/Atehch%20Web%20App/web/account.jsp</file>
+            <file>file:/E:/Files/projects/Git%20projects/ATECH/Atehch%20Web%20App/src/java/atech/servlets/ac/za/CreateAccountServlet.java</file>
+            <file>file:/E:/Files/projects/Git%20projects/ATECH/Atehch%20Web%20App/src/java/atech/servlets/ac/za/ChangePassword.java</file>
+            <file>file:/E:/Files/projects/Git%20projects/ATECH/Atehch%20Web%20App/web/adminHome.jsp</file>
+            <file>file:/E:/Files/projects/Git%20projects/ATECH/Atehch%20Web%20App/src/java/atech/servlets/ac/za/GetProductServelt.java</file>
+            <file>file:/E:/Files/projects/Git%20projects/ATECH/Atehch%20Web%20App/src/java/atech/servlets/ac/za/AddGpuServlet.java</file>
         </group>
     </open-files>
 </project-private>

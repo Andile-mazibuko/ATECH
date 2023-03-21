@@ -68,6 +68,10 @@
         <servlet-name>AdminListUsersSrvlet</servlet-name>
         <servlet-class>atech.servlets.ac.za.AdminListUsersSrvlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RemoveCustomer</servlet-name>
+        <servlet-class>atech.servlets.ac.za.RemoveCustomer</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CreateAccountServlet</servlet-name>
         <url-pattern>/CreateAccountServlet.do</url-pattern>
@@ -135,6 +139,10 @@
     <servlet-mapping>
         <servlet-name>AdminListUsersSrvlet</servlet-name>
         <url-pattern>/AdminListUsersSrvlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RemoveCustomer</servlet-name>
+        <url-pattern>/RemoveCustomer.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
